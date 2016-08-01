@@ -78,19 +78,19 @@ body {
 
 
 
-::-webkit-input-placeholder {color:#ffffff;}
-::-moz-placeholder          {color:#ffffff;}/* Firefox 19+ */
-:-moz-placeholder           {color:#ffffff;}/* Firefox 18- */
-:-ms-input-placeholder      {color:#ffffff;}
+::-webkit-input-placeholder {color:#a5abb8;}
+::-moz-placeholder          {color:#a5abb8;}/* Firefox 19+ */
+:-moz-placeholder           {color:#a5abb8;}/* Firefox 18- */
+:-ms-input-placeholder      {color:#a5abb8;}
 
-input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
-input::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
-input:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
-input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
-input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
-input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
-input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
-input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+input::-webkit-input-placeholder       {opacity: 1; transition: opacity .3s ease;}
+input::-moz-placeholder                {opacity: 1; transition: opacity .3s ease;}
+input:-moz-placeholder                 {opacity: 1; transition: opacity .3s ease;}
+input:-ms-input-placeholder            {opacity: 1; transition: opacity .3s ease;}
+input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity .3s ease;}
+input:focus::-moz-placeholder          {opacity: 0; transition: opacity .3s ease;}
+input:focus:-moz-placeholder           {opacity: 0; transition: opacity .3s ease;}
+input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity .3s ease;}
 
 
 /*.animation-delay {
@@ -172,22 +172,25 @@ select::-ms-expand {
     width: 100%;
     font-size: 0;
     line-height: 0;
-    padding: 25px 0;
+    padding: 20px 0 20px 0;
     border-bottom: 1px solid #eaedf2;
 }
 
 .left-header-col {
     display: inline-block;
-    vertical-align: top;
+    vertical-align: middle;
     width: 26%;
 }
 
 .logo-box {
-
+    display: inline-block;
+    vertical-align: middle;
+    /*margin: 5px 0 0 0;*/
 }
 
 .logo-link {
-
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .logo-img {
@@ -196,7 +199,7 @@ select::-ms-expand {
 
 .right-header-col {
     display: inline-block;
-    vertical-align: top;
+    vertical-align: middle;
     width: 74%;
     text-align: right;
 }
@@ -208,35 +211,61 @@ select::-ms-expand {
 .switch-language {
     display: inline-block;
     vertical-align: middle;
-    padding: 0 2%;
+    width: 56%;
+    padding: 0 1%;
 }
 
-.lang-item {
+/*.lang-item {
     display: inline-block;
     vertical-align: middle;
+    min-width: 30px;
+    min-height: 72px;
+    margin: -18px 0 0 0;
+    padding: 0 3%;
+    position: relative;
+    outline: 1px solid red;
 }
 
 .lang-link {
-    display: block;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    top: 28px;
+    left: 0;
     cursor: pointer;
-    height: 100%;
-    padding: 0 16%;
+    height: 44px;
+    min-width: 30px;
+    padding: 3% 3%;
     font-family: "Ubuntu", Arial, Verdana, sans-serif;
     color: #a5abb8;
     font-size: 18px;
     line-height: 22px;
     text-align: center;
     outline: 1px solid #000fff;
-}
+}*/
 
 .lang-link.active {
-
+    color: #ed1c24;
 }
+/*
+.lang-link.active:after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    background: rgba(237, 28, 36, 1);
+
+}*/
 
 .btn-box {
     display: inline-block;
     vertical-align: middle;
-    padding: 0 2%;
+    /*padding: 0 2%;*/
+    width: 9%;
+    outline: 1px solid red;
 }
 
 .btn-pages {
@@ -255,18 +284,40 @@ select::-ms-expand {
     border-radius: 50%;
 }
 
+.icons-box {
+    display: block;
+    /*height: 22px;*/
+    width: 22px;
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+}
+
+.icons-box span {
+    display: inline-block;
+    vertical-align: top;
+    width: 3px;
+    height: 3px;
+    margin: 2px;
+    background: rgba(255, 255, 255, 1);
+}
+
 
 .user {
     display: inline-block;
     vertical-align: middle;
-    padding: 0 0 0 2%;
+    /*padding: 0 0 0 2%;*/
+    width: 31%;
+    font-size: 0;
+    line-height: 0;
 }
 
 .photo {
-    display: table-cell;
+    display: inline-block;
     vertical-align: middle;
+    width: 32%;
     position: relative;
-    padding: 0 2% 0 0;
+    /*padding: 0 2% 0 0;*/
 }
 
 .photo-user {
@@ -274,7 +325,7 @@ select::-ms-expand {
     vertical-align: middle;
 }
 
-.user-account {
+.show-user-ac {
     display: inline-block;
     vertical-align: top;
     position: absolute;
@@ -283,14 +334,16 @@ select::-ms-expand {
 }
 
 .user-name {
-    display: table-cell;
+    display: inline-block;
     vertical-align: middle;
+    width: 68%;
+    text-align: right;
     font-family: "Ubuntu", Arial, Verdana, sans-serif;
     color: #a5abb8;
     font-size: 18px;
     line-height: 22px;
     font-weight: normal;
-    padding: 0 0 0 2%;
+    /*padding: 0 0 0 2%;*/
 }
 
 .user-name span {
@@ -325,6 +378,7 @@ select::-ms-expand {
         .calendar {
             display: block;
             width: 100%;
+            margin: 0 0 25px 0;
         }
 
         .times {
@@ -366,20 +420,22 @@ select::-ms-expand {
         .time-content {
             display: block;
             width: 100%;
-            padding: 5% 0;
+            /*padding: 5% 0;*/
             background: rgba(237, 28, 36, 1);
             text-align: center;
-            -webkit-border-radius: 3px;
-            -moz-border-radius: 3px;
-            -ms-border-radius: 3px;
-            -o-border-radius: 3px;
-            border-radius: 3px;
+            box-shadow: 0px 15px 35px 0px rgba(237, 28, 36, 0.35);
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -ms-border-radius: 4px;
+            -o-border-radius: 4px;
+            border-radius: 4px;
         }
 
         .time-content .left {
             display: inline-block;
             vertical-align: middle;
             width: 69%;
+            padding: 15px 0;
         }
 
         .time-content .right {
@@ -387,7 +443,14 @@ select::-ms-expand {
             vertical-align: middle;
             width: 31%;
             height: 100%;
+            padding: 15px 0;
+            /*padding: 22px 0;*/
             background: rgba(0, 0, 0, .2);
+            -webkit-border-radius: 0 4px 4px 0;
+            -moz-border-radius: 0 4px 4px 0;
+            -ms-border-radius: 0 4px 4px 0;
+            -o-border-radius: 0 4px 4px 0;
+            border-radius: 0 4px 4px 0;
         }
 
         .num-day {
@@ -438,7 +501,9 @@ select::-ms-expand {
             display: block;
             width: 30px;
             height: 30px;
-            margin: 0 auto;
+            position: relative;
+            top: 50%;
+            margin: -15px auto 0 auto;
             background-image: url(img/calendar_icon.png);
             background-repeat: no-repeat;
             background-position: center; 
@@ -446,14 +511,17 @@ select::-ms-expand {
 
         /* ----- /Calendar ------ */
 
-        .stories-articles {
+        /* ----- Filters ------ */
 
+        .stories-articles {
+            padding: 5px 0 0 0;
         }
 
         .filters {
             font-size: 0;
             line-height: 0;
             text-align: center;
+            padding: 0 0 25px 0;
         }
 
         .filters-list {
@@ -495,12 +563,13 @@ select::-ms-expand {
             width: 100%;
             padding: 5% 0 3% 0;
             background: rgba(237, 28, 36, 1);
+            box-shadow: 0px 15px 35px 0px rgba(237, 28, 36, 0.35);
             text-align: center;
-            -webkit-border-radius: 3px;
-            -moz-border-radius: 3px;
-            -ms-border-radius: 3px;
-            -o-border-radius: 3px;
-            border-radius: 3px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -ms-border-radius: 4px;
+            -o-border-radius: 4px;
+            border-radius: 4px;
         }
 
         .inner-flter {
@@ -538,11 +607,11 @@ select::-ms-expand {
         }
 
         .list-box {
-
+            padding:  5px 0 0 0;
         }
 
         .list-links-h {
-
+            padding: 0 0 5px 0;
         }
 
         .list-item-h {
@@ -577,32 +646,70 @@ select::-ms-expand {
             font-weight: normal;
         }
 
+        .list-box-bg {
+            background: rgba(220, 226, 237, .5);
+            -webkit-box-shadow: 0px 15px 35px 0px rgba(177, 191, 215, .35);
+            -moz-box-shadow: 0px 15px 35px 0px rgba(177, 191, 215, .35);
+            -ms-box-shadow: 0px 15px 35px 0px rgba(177, 191, 215, .35);
+            -o-box-shadow: 0px 15px 35px 0px rgba(177, 191, 215, .35);
+            box-shadow: 0px 15px 35px 0px rgba(177, 191, 215, .35);
+        }
 
         .search-box {
             display: block;
+            font-size: 0;
+            line-height: 0;
             width: 100%;
+            height: 65px;
+            position: relative;
+            background: rgba(255, 255 , 255, 1);
+            margin: 15px 0 5px 0;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -ms-border-radius: 4px;
+            -o-border-radius: 4px;
+            border-radius: 4px;
         }
 
         .search-inpt {
             display: inline-block;
             vertical-align: top;
+            width: 85%;
+            height: 65px;
+            padding: 0 0 0 7%;
             font-family: "Ubuntu", Arial, Verdana, sans-serif;
             color: #a5abb8;
             font-size: 16px;
-            line-height: 22px;
+            line-height: 63px;
             font-weight: normal;
             border: 1px solid transparent;
+        }
+
+        .search-btn-box {
+            display: inline-block;
+            vertical-align: middle;
+            width: 15%;
+            position: relative;
+            top: 50%;
+            height: 21px;
+            margin: -10px 0 0 0;
         }
 
         .search-btn {
             display: inline-block;
             vertical-align: top;
-            width: 50px;
-            height: 50px;
+            cursor: pointer;
+            width: 21px;
+            height: 21px;
+            background: rgba(255, 255, 255, 1);
+            border: 1px solid transparent;
         }
 
         .search-icon {
-
+            display: block;
+            width: 27px;
+            height: 27px;
+            margin: -3px auto 0 auto;
         }
 
         .list-items-box {
@@ -611,17 +718,28 @@ select::-ms-expand {
             overflow: hidden;
             height: 310px;
             background: rgba(255, 255, 255, 1);
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -ms-border-radius: 4px;
+            -o-border-radius: 4px;
+            border-radius: 4px;
+
         }
 
         .list-items {
             display: block;
             width: 120%;
             overflow-y: scroll;
-            height: 310px;    
-            padding: 0 26% 0 6%;
+            height: 310px;
+            margin: 2% 0;
+            padding: 0 20% 0 6%;
         }
 
         .list-item {
+            display: block;
+            width: 100%;
+            font-size: 0;
+            line-height: 0;
             font-family: "Ubuntu", Arial, Verdana, sans-serif;
             color: #a5abb8;
             font-size: 16px;
@@ -638,6 +756,14 @@ select::-ms-expand {
             font-size: 16px;
             line-height: 35px;
             font-weight: normal;
+        }
+
+        .list-item .item-num {
+            width: 18%;
+        }
+
+        .list-item .item-h {
+            width: 76%;
         }
 
         .list-item.active .item-num,
@@ -667,15 +793,24 @@ select::-ms-expand {
 
 /* ----- MAIN CONTENT ------ */
 
-    /* ----- Header Page ------ */
-
         .main-content {
             background: rgba(255, 255, 255, 1);
-            padding: 40px 10px 5px 10px;
+            padding: 40px 1.7% 5px 1.7%;
+            -webkit-box-shadow: 0px 15px 35px 0px rgba(177, 191, 215, .35);
+            -moz-box-shadow: 0px 15px 35px 0px rgba(177, 191, 215, .35);
+            -ms-box-shadow: 0px 15px 35px 0px rgba(177, 191, 215, .35);
+            -o-box-shadow: 0px 15px 35px 0px rgba(177, 191, 215, .35);
+            box-shadow: 0px 15px 35px 0px rgba(177, 191, 215, .35);
+        }
+
+    /* ----- Header Page ------ */
+
+        .header-page-wrap {
+            padding: 0 2%;
         }
 
         .header-page {
-            /*padding: 40px 0 0 0;*/
+            padding: 0 0 30px 0;
             border-bottom: 1px solid #edf0f5;
             font-size: 0;
             line-height: 0;
@@ -683,8 +818,8 @@ select::-ms-expand {
 
         .header-page-left-col {
             display: inline-block;
-            vertical-align: bottom;
-            width: 40%;
+            vertical-align: top;
+            width: 50%;
         }
 
         .page-h {
@@ -716,7 +851,7 @@ select::-ms-expand {
         .header-page-right-col {
             display: inline-block;
             vertical-align: bottom;
-            width: 60%;
+            width: 50%;
         }
 
         .header-page-nav-list {
@@ -725,11 +860,12 @@ select::-ms-expand {
             text-align: center;
         }
 
-        .item {
+        .header-page-nav-list .item {
             display: inline-block;
             vertical-align: top;
             position: relative;
             margin: 0 1%;
+            /*height: 115px;*/
         }
 
         .page-link {
@@ -766,6 +902,33 @@ select::-ms-expand {
             width: 100%;
         }
 
+        .table-header {
+            display: table-row;
+        }
+
+        .table-row.table-header {
+            font-size: 0;
+            line-height: 0;
+        }
+
+        .table-header .table-cell {
+            font-family: "Ubuntu", Arial, Verdana, sans-serif;
+            color: #7e838c;
+            font-size: 13px;
+            line-height: 22px;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        .table-header .table-cell-1 {
+/*            font-family: "Ubuntu", Arial, Verdana, sans-serif;
+            color: #a5abb8;
+            font-size: 13px;
+            line-height: 22px;
+            font-weight: 400;
+            text-transform: uppercase;*/
+        }
+
         .table-header .table-cell-2 h3 {
             display: inline-block;
             vertical-align: middle;
@@ -773,7 +936,7 @@ select::-ms-expand {
             color: #ed1c24;
             font-size: 13px;
             line-height: 16px;
-            font-weight: 400;
+            font-weight: 700;
             padding: 0 3% 0 0;
             text-transform: uppercase;
         }
@@ -796,29 +959,41 @@ select::-ms-expand {
         .table-row {
             display: table-row;
             width: 100%;
- /*           border-collapse: collapse;
-            border-spacing: 20px 0px;*/
-/*            border-top: 10px solid rgba(255, 255, 255, 1);
-            border-bottom: 10px solid rgba(255, 255, 255, 1);*/
+            background: rgba(255, 255, 255, 1);
+            font-size: 0;
+            line-height: 0;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -ms-border-radius: 4px;
+            -o-border-radius: 4px;
+            border-radius: 4px;
         }
 
         .table-row:nth-child(2n) {
             background: rgba(246, 249, 252, 1);
-/*            border-top: 10px solid rgba(246, 249, 252, 1);
-            border-bottom: 10px solid rgba(246, 249, 252, 1);*/
+        }
+
+        .table-cell {
+            font-size: 0;
+            line-height: 0;
         }
 
         .table-cell p {
             display: inline-block;
             vertical-align: middle;
+            width: 68%;
             font-family: "Ubuntu", Arial, Verdana, sans-serif;
             color: #7e838c;
             font-size: 16px;
-            /*line-height: 22px;*/
+            line-height: 22px;
             font-weight: 400;
             padding: 0 2% 0 0;
+        }
 
-            line-height: 62px;
+        .table-cell .product-num-box {
+            display: inline-block;
+            vertical-align: middle;
+            width: 32%;
         }
 
         .table-cell p.product-num {
@@ -842,58 +1017,61 @@ select::-ms-expand {
         }
 
         .table-cell-2 p.product-num {
+            display: inline-block;
+            vertical-align: middle;
             background: rgba(237, 28, 36, 1);
         }
 
-        .table-row .table-header {
-            display: table-cell;
+        .table-row {
+            display: inline-block;
             vertical-align: middle;
+            width: 100%;
+            padding: 20px 0;
         }
 
         .table-cell {
-
+            display: inline-block;
+            vertical-align: middle;
+            width: 16%;
+            padding: 0 1% 0 3%;
+            font-family: "Ubuntu", Arial, Verdana, sans-serif;
+            color: #7e838c;
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: 400;
         }
 
         .table-cell-1 {
-            display: table-cell;
-            vertical-align: middle;
+           width: 17%;
         }
 
         .table-cell-2 {
-            display: table-cell;
-            vertical-align: middle;
-       /*     font-size: 0;
-            line-height: 0;*/
+           width: 20%;
         }
 
-/*        .table-cell-2 h3 {
-            display: inline-block;
-            vertical-align: middle;
+        .table-cell-2 h3 {
+  
         }
 
         .table-cell-2 button {
             display: inline-block;
             vertical-align: middle; 
-        }*/
+        }
 
         .table-cell-3 {
-            display: table-cell;
-            vertical-align: middle;
+            width: 15%;
         }
 
         .table-cell-4 {
-            display: table-cell;
-            vertical-align: middle;
+            width: 18%;
         }
 
         .table-cell-5 {
-            display: table-cell;
-            vertical-align: middle;
+            width: 14%;
         }
 
         .table-cell-6 {
-            display: table-cell;
-            vertical-align: middle;
+            width: 16%;
         }
 
 

@@ -20,6 +20,8 @@ $(document).ready(function() {
     });
 
 
+    $(".time-content .right").outerHeight($(".time-content").height());
+
 
 
 // -----------------
