@@ -158,12 +158,12 @@ input:focus:-moz-placeholder           {opacity: 0; transition: opacity .3s ease
 input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity .3s ease;}
 
 
-/*.animation-delay {
-    -webkit-animation-delay: .5s;
-    -moz-animation-delay: .5s;
-    -o-animation-delay: .5s;
-    animation-delay: .5s;
-}*/
+.animation-delay {
+    -webkit-animation-delay: .3s;
+    -moz-animation-delay: .3s;
+    -o-animation-delay: .3s;
+    animation-delay: .3s;
+}
 
 
 /*-------------------------------------------*/
@@ -1050,10 +1050,6 @@ select::-ms-expand {
             color: #7e838c;
         }
 
-  /*      .strong-grey {
-            color: #7e838c;
-        }*/
-
         .header-page-right-col {
             display: inline-block;
             vertical-align: bottom;
@@ -1066,8 +1062,6 @@ select::-ms-expand {
             line-height: 0;
             text-align: right;
             position: absolute;
-            /* top: 0; */
-            /*top: -25px;*/
             bottom: -30px;
             left: 0;
             width: 100%;
