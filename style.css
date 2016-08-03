@@ -459,7 +459,14 @@ select::-ms-expand {
     border-radius: 50%;
 }
 
-.show-user-ac span {
+.show-user-ac img {
+    display: block;
+    width: 8px;
+    height: 5px;
+    margin: 0 auto;
+}
+
+/*.show-user-ac span {
     display: block;
     width: 5px;
     height: 2px;
@@ -486,7 +493,7 @@ select::-ms-expand {
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }
-
+*/
 .user-name {
     display: inline-block;
     vertical-align: middle;
@@ -661,9 +668,15 @@ select::-ms-expand {
             position: relative;
             top: 50%;
             margin: -15px auto 0 auto;
-            background-image: url(img/calendar_icon.png);
+      /*      background-image: url(img/calendar_icon.png);
             background-repeat: no-repeat;
-            background-position: center; 
+            background-position: center; */
+        }
+
+        .calendar-icon img {
+            display: block;
+            width: 100%;
+            height: auto;
         }
 
         /* ----- /Calendar ------ */
@@ -836,7 +849,7 @@ select::-ms-expand {
             height: 65px;
             padding: 0 0 0 7%;
             font-family: "Ubuntu", Arial, Verdana, sans-serif;
-            color: #a5abb8;
+            color: #676b73;
             font-size: 16px;
             line-height: 63px;
             font-weight: normal;
@@ -865,8 +878,8 @@ select::-ms-expand {
 
         .search-icon {
             display: block;
-            width: 27px;
-            height: 27px;
+            width: 24px;
+            height: 24px;
             margin: -3px auto 0 auto;
         }
 
@@ -1165,7 +1178,15 @@ select::-ms-expand {
             border-radius: 50%;
         }
 
-        .table-header .sort-btn-box button span {
+        .table-header .sort-btn-box button img {
+            display: block;
+            width: 8px;
+            height: 5px;
+            margin: 0 auto;
+        }
+
+
+/*        .table-header .sort-btn-box button span {
             display: block;
             width: 5px;
             height: 2px;
@@ -1192,7 +1213,7 @@ select::-ms-expand {
             -o-transform: rotate(-45deg);
             transform: rotate(-45deg);
         }
-
+*/
 
 
 
