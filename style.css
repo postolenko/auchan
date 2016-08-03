@@ -914,12 +914,12 @@ select::-ms-expand {
             overflow-y: scroll;
             height: 310px;
             margin: 2% 0;
-            padding: 0 10% 0 7%;
+            padding: 0 0 0 7%;
         }
 
         .list-item {
             display: block;
-            width: 95%;
+            width: 100%;
             font-size: 0;
             line-height: 0;
             font-family: "Ubuntu", Arial, Verdana, sans-serif;
@@ -927,6 +927,7 @@ select::-ms-expand {
             font-size: 16px;
             line-height: 35px;
             font-weight: normal;
+            padding: 0 15% 0 0;
         }
 
         .list-item .item-num,
