@@ -19,6 +19,8 @@
 
 	<link rel="stylesheet" type="text/css" href="responsive.css">
 
+	<!--  Отключен шрифт от Google Fonts. Шрифт подкдючен локально   -->
+
 	<!-- <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,300,700' rel='stylesheet' type='text/css'> -->
 
 	<script type="text/javascript" src="vendors/js/jquery.js"></script>
@@ -159,7 +161,11 @@
 
 										<div class="calendar-icon-box right">
 
-											<div class="calendar-icon"><img src="img/calendar.svg" alt="Calendar"></div>
+											<div class="calendar-icon">
+													<!-- Добавлена svg иконка календаря вместо тега <i ></i> -->
+												<img src="img/calendar.svg" alt="Calendar">
+
+											</div>
 
 										</div>
 
@@ -232,7 +238,11 @@
 
 										<div class="search-btn-box">
 
-											<button class="search-btn"><img class="search-icon" src="img/search.svg"></button>
+											<button class="search-btn">
+													<!-- Добавлена svg иконка лупы вместо тега <i ></i> -->
+												<img class="search-icon" src="img/search.svg"> 
+
+											</button>
 										
 										</div>
 
@@ -386,15 +396,15 @@
 
 								<div class="table-cell table-cell-1">
 
-									<div class="table-cell-block">
+									<div class="table-cell-block">  <!-- Добавлен оберточныей блок в каждой ячейке -->
 
-										<h3>Name</h3>
+										<h2>Name</h2>
 
-										<div class="sort-btn-box">
+										<div class="sort-btn-box"> <!-- Добавлен оберточныей блок для кнопки со стрелкой вниз в каждой ячейке -->
 
 											<button>
 
-												<img src="img/arrow.svg" alt="">
+												<img src="img/arrow.svg" alt="">  <!-- Убраны теги "span" в кажой ячейке и заменен на svg иконку -->
 
 											</button>
 
@@ -408,7 +418,7 @@
 
 									<div class="table-cell-block">
 
-										<h3>Ca<br>RUR</h3>
+										<h2 class="red-bold">Ca<br>RUR</h2>
 
 										<div class="sort-btn-box">
 
@@ -428,7 +438,7 @@
 
 									<div class="table-cell-block">
 
-										<h3>Client <br>nomber</h3>
+										<h2>Client <br>nomber</h2>
 
 										<div class="sort-btn-box">
 
@@ -448,7 +458,7 @@
 
 									<div class="table-cell-block">
 
-										<h3>Article <br>nomber</h3>
+										<h2>Article <br>nomber</h2>
 
 										<div class="sort-btn-box">
 
@@ -468,7 +478,7 @@
 
 									<div class="table-cell-block">
 
-										<h3>Panier <br>valeur</h3>
+										<h2>Panier <br>valeur</h2>
 
 										<div class="sort-btn-box">
 
@@ -488,7 +498,7 @@
 
 									<div class="table-cell-block">
 
-										<h3>Px moyen <br>valeur</h3>
+										<h2>Px moyen <br>valeur</h2>
 
 										<div class="sort-btn-box">
 
@@ -506,9 +516,15 @@
 
 							</div>
 							<!-- /Шапка таблицы - верхняя строка -->
+
+
 							<div class="table-row">
 								
-								<div class="table-cell table-cell-1">Classic comp</div>
+								<div class="table-cell table-cell-1">
+
+									<h3>Classic comp</h3>
+
+								</div>
 
 								<div class="table-cell table-cell-2">
 
@@ -518,7 +534,7 @@
 										
 										<div class="product-num-box">
 
-											<p class="product-num">01</p>
+											<p class="product-num red-circle-bg">01</p>
 										
 										</div>
 
@@ -594,7 +610,11 @@
 
 							<div class="table-row">
 								
-								<div class="table-cell table-cell-1">Classic comp</div>
+								<div class="table-cell table-cell-1">
+
+									<h3>Classic comp</h3>
+
+								</div>
 
 								<div class="table-cell table-cell-2">
 
