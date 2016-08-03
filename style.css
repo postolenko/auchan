@@ -889,7 +889,7 @@ select::-ms-expand {
             overflow-y: scroll;
             height: 310px;
             margin: 2% 0;
-            padding: 0 17% 0 7%;
+            padding: 0 15% 0 7%;
         }
 
         .list-item {
@@ -920,7 +920,7 @@ select::-ms-expand {
         }
 
         .list-item .item-h {
-            width: 76%;
+            width: 73%;
         }
 
         .list-item.active .item-num,
@@ -940,7 +940,7 @@ select::-ms-expand {
             -ms-border-radius: 50%;
             -o-border-radius: 50%;
             border-radius: 50%;
-            margin: 0 0 0 -5px;
+            /*margin: 0 0 0 -15px;*/
         }
 
 
