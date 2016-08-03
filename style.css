@@ -919,7 +919,7 @@ select::-ms-expand {
 
         .list-item {
             display: block;
-            width: 100%;
+            width: 86%;
             font-size: 0;
             line-height: 0;
             font-family: "Ubuntu", Arial, Verdana, sans-serif;
@@ -927,7 +927,6 @@ select::-ms-expand {
             font-size: 16px;
             line-height: 35px;
             font-weight: normal;
-            padding: 0 5% 0 0;
         }
 
         .list-item .item-num,
@@ -966,7 +965,7 @@ select::-ms-expand {
             -ms-border-radius: 50%;
             -o-border-radius: 50%;
             border-radius: 50%;
-            margin: 0px 0px 0 -23px
+            /*margin: 0px 0px 0 -23px;*/
         }
 
 
