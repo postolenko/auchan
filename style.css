@@ -91,8 +91,6 @@ html {
     }
 }
 
-
-
 html,
 body {
     height: 100%;
@@ -101,11 +99,10 @@ body {
 
 body {    
     background: rgb(250,252,255);
-    -webkit-font-smoothing: subpixel-antialiased !important;
-    /*-webkit-font-smoothing: antialiased;*/
+/*    -webkit-font-smoothing: subpixel-antialiased !important;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility:    hidden;
-    -ms-backface-visibility:     hidden;
+    -ms-backface-visibility:     hidden;*/
 }
 
 .wrapper {
