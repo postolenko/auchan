@@ -76,7 +76,22 @@ html {
     color: #000000;
     font-size: 13px;
     line-height: 21px;
+
 }
+
+
+@mixin font-smoothing($value: on) {
+    @if $value == on {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    @else {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+}
+
+
 
 html,
 body {
@@ -87,6 +102,7 @@ body {
 body {    
     background: rgb(250,252,255);
     -webkit-font-smoothing: subpixel-antialiased !important;
+    /*-webkit-font-smoothing: antialiased;*/
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility:    hidden;
     -ms-backface-visibility:     hidden;
