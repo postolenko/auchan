@@ -914,7 +914,7 @@ select::-ms-expand {
             width: 100%;
             overflow-y: scroll;
             height: 310px;
-            margin: 2% 0;
+            margin: 2% 0 0 10%;
             /*padding: 0 0 0 7%;*/
         }
 
