@@ -11,7 +11,7 @@ $(document).ready(function() {
     var widthP;
 
 
-    getPwidth();
+    // getPwidth();
 
 
     $(document).scroll(function() {
@@ -22,7 +22,7 @@ $(document).ready(function() {
 
     $(window).resize(function() {
 
-        getPwidth();
+        // getPwidth();
 
     });
 

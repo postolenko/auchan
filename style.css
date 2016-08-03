@@ -992,7 +992,7 @@ select::-ms-expand {
 
         .main-content {
             background: rgba(255, 255, 255, 1);
-            padding: 40px 1.7% 5px 1.7%;
+            padding: 40px 2% 10px 2%;
             -webkit-border-radius: 4px 4px 4px 4px;
             -moz-border-radius: 4px 4px 4px 4px;
             -ms-border-radius: 4px 4px 4px 4px;
@@ -1111,7 +1111,6 @@ select::-ms-expand {
     /* ----- Page Content ------ */
 
         .report-table {
-            /*display: table;*/
             width: 100%;
         }
 
@@ -1119,15 +1118,17 @@ select::-ms-expand {
             /*display: table-row;*/
             display: block;
             width: 100%;
+            font-style: 0;
+            line-height: 0;
         }
 
         .table-row.table-header {
-            padding: 27px 3%;
+            padding: 33px 3%;
         }
 
         .table-header .table-cell {
             display: inline-block;
-            vertical-align: middle;
+            vertical-align: top;
             font-family: "Ubuntu", Arial, Verdana, sans-serif;
             color: #7e838c;
             font-size: 13px;
@@ -1135,52 +1136,35 @@ select::-ms-expand {
             font-weight: 500;
             text-transform: uppercase;
             text-align: left;
-            /*padding: 0 1%;*/
-            /*outline: 1px solid rgba(0, 0, 0, .3);*/
+            padding: 0 0 0 30px;
+        }
+
+        .table-header .table-cell:last-child {
+            padding: 0;
         }
 
         .table-header .table-cell h3 {
             display: table-cell;
-            vertical-align: middle;
+            vertical-align: top;
             width: 80%;
+            height: 100%;
             font-family: "Ubuntu", Arial, Verdana, sans-serif;
             color: #7e838c;
             font-size: 13px;
-            line-height: 22px;
+            line-height: 18px;
             font-weight: 500;
             text-transform: uppercase;
             /*padding: 0 0 0 5%;*/
         }
 
-        .table-header .table-cell-1 {
-            padding-left: 0;
-        }
-
-        .table-header .table-cell-2 {
-            padding: 0 0 0 1.5%;
-        }
-
-        .table-header .table-cell-2 h3 {
-            display: table-cell;
-            vertical-align: middle;
-            width: 80%;
-            font-family: "Ubuntu", Arial, Verdana, sans-serif;
-            color: #ed1c24;
-            font-size: 13px;
-            line-height: 16px;
-            font-weight: 700;
-            padding: 0 3% 0 0;
-            text-transform: uppercase;
-        }
-
-
         .table-cell .sort-btn-box {
             display: table-cell;
             vertical-align: middle;
-            width: 50px;
+            width: 33px;
             float: right;
             padding: 0 0 0 5px;
             text-align: left;
+            /*outline: 1px solid green;*/
         }
 
         .table-header .sort-btn-box button {
@@ -1212,42 +1196,35 @@ select::-ms-expand {
         }
 
 
-/*        .table-header .sort-btn-box button span {
-            display: block;
-            width: 5px;
-            height: 2px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 1);
+
+        .table-header .table-cell-1 {
+            padding-left: 0;
         }
 
-        .table-header .sort-btn-box button span:nth-child(1) {
-            position: relative;
-            top: 2px;
-            left: -2px;
-            -webkit-transform: rotate(45deg);
-            -moz-transform: rotate(45deg);
-            -o-transform: rotate(45deg);
-            transform: rotate(45deg);
+        .table-header .table-cell-2 {
+            /*padding: 0 0 0 1.5%;*/
+            padding: 0 0 0 3%;
         }
 
-        .table-header .sort-btn-box button span:nth-child(2) {
-            position: relative;
-            top: 0px;
-            right: -1px;
-            -webkit-transform: rotate(-45deg);
-            -moz-transform: rotate(-45deg);
-            -o-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+        .table-header .table-cell-2 h3 {
+            display: table-cell;
+            vertical-align: middle;
+            width: 80%;
+            font-family: "Ubuntu", Arial, Verdana, sans-serif;
+            color: #ed1c24;
+            font-size: 13px;
+            line-height: 18px;
+            font-weight: 700;
+            padding: 0 3% 0 0;
+            text-transform: uppercase;
         }
-*/
-
-
 
         .table-row {
             display: inline-block;
             vertical-align: middle;
             width: 100%;
-            padding: 19px 3%;
+            padding: 21px 3%;
+            /*padding: 19px 0;*/
             background: rgba(255, 255, 255, 1);
             font-size: 0;
             line-height: 0;
@@ -1267,7 +1244,7 @@ select::-ms-expand {
             /*display: table;*/
             /*display: inline-block;
             vertical-align: middle;*/
-            display: table-cell;
+            display: inline-block;
             vertical-align: middle;
             font-size: 0;
             line-height: 0;
@@ -1316,7 +1293,7 @@ select::-ms-expand {
         .table-cell .product-num-box {
             display: table-cell;
             vertical-align: middle;
-            width: 50px;
+            width: 33px;
             float: right;
             padding: 0 0 0 5px;
             text-align: left;
@@ -1345,10 +1322,12 @@ select::-ms-expand {
             display: inline-block;
             vertical-align: middle;
             background: rgba(237, 28, 36, 1);
+            margin: -3px 0 0 0;
         }
 
         .table-cell-1 {
-           width: 18%;
+           /*width: 18%;*/
+           width: 15%;
            text-align: left;
            padding: 0 1% 0 0;
         }
@@ -1367,21 +1346,24 @@ select::-ms-expand {
         }
 
         .table-cell-3 {
-            width: 15%;
+            /*width: 15%;*/
+            width: 16%;
         }
 
         .table-cell-4 {
-            width: 17%;
+            /*width: 17%;*/
+            width: 19%;
         }
 
         .table-cell-5 {
+            /*width: 16%;*/
             width: 16%;
         }
 
         .table-cell-6 {
             /*width: 13%;*/
-            width: 18%;
-            padding: 0 0 0 1%;
+            width: 14%;
+            /*padding: 0 0 0 1%;*/
         }
 
 
