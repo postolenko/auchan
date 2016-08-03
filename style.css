@@ -911,15 +911,16 @@ select::-ms-expand {
         .list-items {
             display: block;
             width: 115%;
+            width: 100%;
             overflow-y: scroll;
             height: 310px;
             margin: 2% 0;
-            padding: 0 0 0 7%;
+            /*padding: 0 0 0 7%;*/
         }
 
         .list-item {
             display: block;
-            width: 86%;
+            width: 100%;
             font-size: 0;
             line-height: 0;
             font-family: "Ubuntu", Arial, Verdana, sans-serif;
@@ -965,7 +966,7 @@ select::-ms-expand {
             -ms-border-radius: 50%;
             -o-border-radius: 50%;
             border-radius: 50%;
-            /*margin: 0px 0px 0 -23px;*/
+            margin: 0px 0px 0 -23px;
         }
 
 
