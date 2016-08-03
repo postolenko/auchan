@@ -1184,7 +1184,7 @@ select::-ms-expand {
 
         .table-header .sort-btn-box button img {
             display: block;
-            width: auto;
+            max-width: 8px;
             height: auto;
             margin: 0 auto;
         }
