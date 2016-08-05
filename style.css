@@ -1057,7 +1057,40 @@ select::-ms-expand {
                     cursor: pointer;
                     border: none;
                     background: rgba(29, 47, 59, 1);
+            
+                    -webkit-transition-property: background;
+                    -webkit-transition-duration: .3s;
+                    -webkit-transition-timing-function: ease;
 
+                    -moz-transition-property: background;
+                    -moz-transition-duration: .3s;
+                    -moz-transition-timing-function: ease;
+
+                    -ms-transition-property: background;
+                    -ms-transition-duration: .3s;
+                    -ms-transition-timing-function: ease;
+
+                    -o-transition-property: background;
+                    -o-transition-duration: .3s;
+                    -o-transition-timing-function: ease;
+
+                    transition-property: background;
+                    transition-duration: .3s;
+                    transition-timing-function: ease;
+                }
+
+                .arrow-btn:link,
+                .arrow-btn:visited {
+                    background: rgba(29, 47, 59, 1);
+                }
+
+                .arrow-btn:hover {
+                    background: rgba(237, 28, 36, 1);
+                }
+
+                .arrow-btn.actve,
+                .arrow-btn:active {
+                    background: rgba(237, 28, 36, 1);
                 }
 
                 .prev-btn-box .arrow-btn {
@@ -1074,10 +1107,6 @@ select::-ms-expand {
                     -ms-border-radius: 0 3px 0 0;
                     -o-border-radius: 0 3px 0 0;
                     border-radius: 0 3px 0 0;
-                }
-
-                .arrow-btn:hover {
-                    background: rgba(237, 28, 36, 1);
                 }
 
                 .left-arrow {
