@@ -43,10 +43,12 @@ $(document).ready(function() {
 
         indexModalBox = $(".show-popup").index(this);
 
+        // $(".show-user-ac:eq("+ indexModalBox +")" ).toggleClass("close");
+
         if( !$(".modal-box:eq("+ indexModalBox +")").hasClass("show-modal-block") ) {
 
             $(".modal-box:eq("+ indexModalBox +")").addClass("show-modal-block");
-            
+            $(".show-popup:eq("+ indexModalBox +")" ).addClass("close");
 
             topCoor = parseInt ( $(".modal-box:eq("+ indexModalBox +").show-modal-block").css("top") );
 
@@ -75,6 +77,7 @@ $(document).ready(function() {
 
                 $(".modal-box:eq("+ indexModalBox +").show-modal-block").css({"top" : ""});
                 $(".modal-box:eq("+ indexModalBox +")").removeClass("show-modal-block");
+                $(".show-popup:eq("+ indexModalBox +")" ).removeClass("close");
 
             }, 510);
 
