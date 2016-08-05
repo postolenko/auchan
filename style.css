@@ -956,6 +956,10 @@ select::-ms-expand {
             background: rgba(25, 41, 50, 1);
         }
 
+        .calendar-btn.close {
+            background: rgba(25, 41, 50, 1);
+        }
+
         .calendar-icon {
             display: block;
             width: 26px;
