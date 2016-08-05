@@ -27,7 +27,7 @@ $(document).ready(function() {
     });
 
 
-    $(".time-content .right").outerHeight($(".time-content").height());
+    $(".calendar-btn").outerHeight($(".time-content").height());
 
     $(".header-page-right-col").css({"min-height" : $(".header-page-nav-list").height() + "px"});
 
