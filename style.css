@@ -1147,13 +1147,10 @@ select::-ms-expand {
                     border-radius:  04px  0 0
                 }
 
-                .calendar-table {
+                .calendar-table-wrapp {
                     display: block;
-                    width: auto;
-                    font-size: 0;
-                    line-height: 0;
-                    margin: 0 auto;
-                    padding: 17px 21px;
+                    width: 100%;
+                    padding: 13px 0;
                     background: rgba(25, 41, 51, 1);
                     -webkit-border-radius: 0 0 4px 4px;
                     -moz-border-radius: 0 0 4px 4px;
@@ -1162,17 +1159,26 @@ select::-ms-expand {
                     border-radius: 0 0 4px 4px;
                 }
 
+                .calendar-table {
+                    display: block;
+                    width: 90%;
+                    font-size: 0;
+                    line-height: 0;
+                    margin: 0 auto;
+                }
+
                 .calendar-table div {
                     display: inline-block;
                     vertical-align: middle;
-                    width: 19%;
+                    width: 20%;
+                    text-align: center;
                     font-family: "Ubuntu", Arial, Verdana, sans-serif;            
                     font-size: 16px;
                     line-height: 21px;
                     font-weight: normal;
                     color: #ffffff;
-                    margin: 5px 0;
-                    padding: 8px 17px;
+                    margin: 2px 0 3px 0;
+                    padding: 11px 2px;
                     letter-spacing: 1px;
                 }
 
@@ -1190,6 +1196,10 @@ select::-ms-expand {
                     /*border-radius: 14px 0 0 14px;*/
                     /*background: rgba(237, 28, 36, 1);*/
                     -webkit-border-radius: 50% 0 0 50%;
+                    -moz-border-radius: 50% 0 0 50%;
+                    -ms-border-radius: 50% 0 0 50%;
+                    -o-border-radius: 50% 0 0 50%;
+                    border-radius: 50% 0 0 50%;
                 }
 
 
