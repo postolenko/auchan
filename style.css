@@ -982,7 +982,7 @@ select::-ms-expand {
                     display: none;
                     min-width: 274px;
                     position: absolute;
-                    top: 110%;
+                    top: 104%;
                     left: -3%;
                     z-index: 11;
                     background: rgba(29, 47, 59, 1);
@@ -996,7 +996,7 @@ select::-ms-expand {
 
                 .calendar.show-modal-block {   /* For JS */
                     display: block;
-                    top: 110%;
+                    top: 104%;
                     opacity: .01;
                 }
 
