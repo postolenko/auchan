@@ -191,42 +191,22 @@ $(document).ready(function() {
 
             scrollCoor = document.getElementsByClassName("scrollwrapp")[scrollObjectIndex].scrollTop;
 
-            // if( scrollCoor <= $(".list-items").height() ) {
+            scrollCoorTime = setInterval(function() {
 
-                // setTimeout(function() {
+                if( scrollCoor >= $(".list-scroll:eq("+ scrollObjectIndex +")").height() - $(".scrollwrapp").height() ) {
 
-                    // getScrollEvent(scrollCoor);
+                    clearTimeout(scrollCoorTime, timeOutScroll);
 
+                    scrollCoor = document.getElementsByClassName("scrollwrapp")[scrollObjectIndex].scrollTop;
 
-                    scrollCoorTime = setInterval(function() {
+                }
 
-                        if( scrollCoor >= $(".list-scroll:eq("+ scrollObjectIndex +")").height() - $(".scrollwrapp").height() ) {
+                scrollCoor++;
 
-                            clearTimeout(scrollCoorTime, timeOutScroll);
+                document.getElementsByClassName("scrollwrapp")[scrollObjectIndex].scrollTop = scrollCoor;
 
-                            scrollCoor = document.getElementsByClassName("scrollwrapp")[scrollObjectIndex].scrollTop;
+            }, scrollTablesTime);
 
-                        }
-
-                        scrollCoor++;
-
-                        document.getElementsByClassName("scrollwrapp")[scrollObjectIndex].scrollTop = scrollCoor;
-
-                        // console.log(scrollCoor);
-
-                    }, scrollTablesTime);
-
-                // }, 500);
-
-
-            // } 
-            // else {
-
-            //     clearTimeout(scrollCoorTime, timeOutScroll);
-
-            //     scrollCoor = document.getElementsByClassName("wrapp-scroll")[0].scrollTop;
-
-            // }
 
             console.log($(".list-items").height());
 
