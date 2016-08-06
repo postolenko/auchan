@@ -148,6 +148,7 @@ $(document).ready(function() {
     var timeOutScroll;
 
     var scrollObjectIndex;
+    var scrollTablesTime = 35;
 
     var scrollCoor = 0;
 
@@ -213,7 +214,7 @@ $(document).ready(function() {
 
                         // console.log(scrollCoor);
 
-                    }, 35);
+                    }, scrollTablesTime);
 
                 // }, 500);
 
