@@ -234,5 +234,31 @@ $(document).ready(function() {
 
         }
 
+        // var countGetHeightBlocks = $(".get-height").lenght;
+        // var countforGetHight = 0;
+
+        // getElemntsHeight();
+
+        // function getElemntsHeight() {
+
+        //     for(countforGetHight = 0; countforGetHight <= countGetHeightBlocks - 1; countforGetHight++ ) {
+
+        //         $(".get-height:eq("+ countforGetHight +")").outerHeight( $(window).height() - $(".get-height:eq("+ countforGetHight +")").offset().top );
+
+        //     }
+
+        // }
+
+
+
+        // -----------------------------------
+
+            
+            $(".authorization-modal").css({"margin-top" : "-" + ( $(".authorization-modal").height() / 2 ) + "px" });
+
+            
+
+        // -----------------------------------
+
 
 });
