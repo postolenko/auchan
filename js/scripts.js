@@ -137,17 +137,21 @@ $(document).ready(function() {
 
     // document.getElementsByClassName("list-items")[0];
 
-    console.log( document.getElementsByClassName("list-items")[0].scrollTop );
+    console.log( $(".list-items").height() );
     // document.getElementsByClassName("list-items")[0].scrollHeight = -200;
 
      // document.getElementsByClassName("list-items")[0].scrollTop = 200;
 
+
+
     var scrollCoorTime;
     var timeOutScroll;
 
-    var scrollCoor = 0;    
+    var scrollObjectIndex;
 
-    $( ".list-items-box" )
+    var scrollCoor = 0;
+
+    $( ".scroll-box" )
 
         .mousewheel(function() {
 
@@ -173,39 +177,55 @@ $(document).ready(function() {
 
             // }, 6000);
 
-             scrollCoor = document.getElementsByClassName("list-items")[0].scrollTop;
+             scrollCoor = document.getElementsByClassName("scrollwrapp")[scrollObjectIndex].scrollTop;
 
         })
         .mouseenter(function() {
 
+            scrollObjectIndex = $(".scroll-box").index(this);
+
             clearTimeout(timeOutScroll);
 
-            scrollCoor = document.getElementsByClassName("list-items")[0].scrollTop;
+            console.log(scrollObjectIndex);
 
-            if( scrollCoor <= 5000 ) {
+            scrollCoor = document.getElementsByClassName("scrollwrapp")[scrollObjectIndex].scrollTop;
+
+            // if( scrollCoor <= $(".list-items").height() ) {
 
                 // setTimeout(function() {
 
                     // getScrollEvent(scrollCoor);
 
+
                     scrollCoorTime = setInterval(function() {
+
+                        if( scrollCoor >= $(".list-scroll:eq("+ scrollObjectIndex +")").height() - $(".scrollwrapp").height() ) {
+
+                            clearTimeout(scrollCoorTime, timeOutScroll);
+
+                            scrollCoor = document.getElementsByClassName("scrollwrapp")[scrollObjectIndex].scrollTop;
+
+                        }
 
                         scrollCoor++;
 
-                        document.getElementsByClassName("list-items")[0].scrollTop = scrollCoor;
+                        document.getElementsByClassName("scrollwrapp")[scrollObjectIndex].scrollTop = scrollCoor;
+
+                        // console.log(scrollCoor);
 
                     }, 35);
 
                 // }, 500);
 
 
-            } else {
+            // } 
+            // else {
 
-                clearTimeout(scrollCoorTime, timeOutScroll);
+            //     clearTimeout(scrollCoorTime, timeOutScroll);
 
-                scrollCoor = document.getElementsByClassName("list-items")[0].scrollTop;
+            //     scrollCoor = document.getElementsByClassName("wrapp-scroll")[0].scrollTop;
 
-            }
+            // }
 
             console.log($(".list-items").height());
 
@@ -214,7 +234,7 @@ $(document).ready(function() {
 
             clearTimeout(scrollCoorTime, timeOutScroll);
 
-             scrollCoor = document.getElementsByClassName("list-items")[0].scrollTop;
+             scrollCoor = document.getElementsByClassName("scrollwrapp")[scrollObjectIndex].scrollTop;
 
             // document.getElementsByClassName("list-items")[0].scrollTop = scrollCoor;
 
@@ -227,7 +247,7 @@ $(document).ready(function() {
 
                 scrollCoor++;
 
-                document.getElementsByClassName("list-items")[0].scrollTop = scrollCoor;
+                document.getElementsByClassName("scrollwrapp")[scrollObjectIndex].scrollTop = scrollCoor;
 
             }, 35);
 

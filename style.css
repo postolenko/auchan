@@ -1422,13 +1422,36 @@ select::-ms-expand {
             border-radius: 4px;
         }
 
+        .scroll-box {
+            overflow: hidden;
+            height: auto;
+        }
+
+        .scrollwrapp {
+            width: 110%;
+            height: 448px;
+            /*padding: 0 10% 0 0;*/
+            padding: 0 6% 0 0;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+
+        .list-items-box .scrollwrapp {
+            display: block;
+            width: 110%;
+            height: 310px;
+            padding: 0 10% 0 0;
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+
         .list-items {
             display: block;
             /*width: 115%;*/
             width: 100%;
-            height: 310px;
+            height: auto;
             margin: 2% 0 0 8%;
-            overflow-y: scroll;
+            /*overflow-y: scroll;*/
         }
 
         .list-item {
