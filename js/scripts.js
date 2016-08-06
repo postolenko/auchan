@@ -16,9 +16,12 @@ $(document).ready(function() {
 
     $(document).scroll(function() {
 
+// console.log( document.getElementsByClassName("list-items")[0].scrollTop);
 
+    // console.log( $(".list-items").scroll() );
 
     });
+
 
     $(window).resize(function() {
 
@@ -130,6 +133,81 @@ $(document).ready(function() {
         
 
     // }
+
+
+    // document.getElementsByClassName("list-items")[0];
+
+    console.log( document.getElementsByClassName("list-items")[0].scrollTop );
+    // document.getElementsByClassName("list-items")[0].scrollHeight = -200;
+
+     // document.getElementsByClassName("list-items")[0].scrollTop = 200;
+
+    var scrollCoorTime;
+
+    var scrollCoor = 0;    
+
+    $(".list-items").mousewheel(function() {
+        console.log("true");
+    });
+
+    $( ".list-items-box" )
+        .mousewheel(function() {
+
+            clearTimeout(scrollCoorTime);
+
+            setTimeout(function() {
+
+                scrollCoor = document.getElementsByClassName("list-items")[0].scrollTop;
+
+                getScrollEvent(scrollCoor);
+
+            }, 3000);
+
+        })
+        .mouseenter(function() {
+
+            scrollCoor = document.getElementsByClassName("list-items")[0].scrollTop;
+
+            if( scrollCoor <= 5000 ) {
+
+                // setTimeout(function() {
+
+                    getScrollEvent(scrollCoor);
+
+                // }, 500);
+
+
+            } else {
+
+                clearTimeout(scrollCoorTime);
+
+                scrollCoor = document.getElementsByClassName("list-items")[0].scrollTop;
+
+            }
+
+            console.log($(".list-items").height());
+
+        })
+        .mouseleave(function() {
+
+            clearTimeout(scrollCoorTime);
+
+            // document.getElementsByClassName("list-items")[0].scrollTop = scrollCoor;
+
+        });
+
+
+        function getScrollEvent(scrollCoor) {
+
+            scrollCoorTime = setInterval(function() {
+
+                scrollCoor++;
+
+                document.getElementsByClassName("list-items")[0].scrollTop = scrollCoor;
+
+            }, 35);
+
+        }
 
 
 });

@@ -1165,6 +1165,7 @@ select::-ms-expand {
                     font-size: 0;
                     line-height: 0;
                     margin: 0 auto;
+                    text-align: left;
                 }
 
                 .calendar-table div {
@@ -1423,11 +1424,11 @@ select::-ms-expand {
 
         .list-items {
             display: block;
-            width: 115%;
+            /*width: 115%;*/
             width: 100%;
-            overflow-y: scroll;
             height: 310px;
             margin: 2% 0 0 8%;
+            overflow-y: scroll;
         }
 
         .list-item {
