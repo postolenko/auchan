@@ -143,28 +143,42 @@ $(document).ready(function() {
      // document.getElementsByClassName("list-items")[0].scrollTop = 200;
 
     var scrollCoorTime;
+    var timeOutScroll;
 
     var scrollCoor = 0;    
 
-    $(".list-items").mousewheel(function() {
-        console.log("true");
-    });
-
     $( ".list-items-box" )
+
         .mousewheel(function() {
 
-            clearTimeout(scrollCoorTime);
+            console.log("true");           
 
-            setTimeout(function() {
+            // document.getElementsByClassName("list-items")[0].scrollTop = "";
 
-                scrollCoor = document.getElementsByClassName("list-items")[0].scrollTop;
+            clearTimeout(scrollCoorTime, timeOutScroll);
 
-                getScrollEvent(scrollCoor);
+            // timeOutScroll = setTimeout(function() {
 
-            }, 3000);
+            //     scrollCoor = document.getElementsByClassName("list-items")[0].scrollTop;
+
+            //     // getScrollEvent(scrollCoor);
+
+            //     scrollCoorTime = setInterval(function() {
+
+            //         scrollCoor++;
+
+            //         document.getElementsByClassName("list-items")[0].scrollTop = scrollCoor;
+
+            //     }, 35);
+
+            // }, 6000);
+
+             scrollCoor = document.getElementsByClassName("list-items")[0].scrollTop;
 
         })
         .mouseenter(function() {
+
+            clearTimeout(timeOutScroll);
 
             scrollCoor = document.getElementsByClassName("list-items")[0].scrollTop;
 
@@ -172,14 +186,22 @@ $(document).ready(function() {
 
                 // setTimeout(function() {
 
-                    getScrollEvent(scrollCoor);
+                    // getScrollEvent(scrollCoor);
+
+                    scrollCoorTime = setInterval(function() {
+
+                        scrollCoor++;
+
+                        document.getElementsByClassName("list-items")[0].scrollTop = scrollCoor;
+
+                    }, 35);
 
                 // }, 500);
 
 
             } else {
 
-                clearTimeout(scrollCoorTime);
+                clearTimeout(scrollCoorTime, timeOutScroll);
 
                 scrollCoor = document.getElementsByClassName("list-items")[0].scrollTop;
 
@@ -190,7 +212,9 @@ $(document).ready(function() {
         })
         .mouseleave(function() {
 
-            clearTimeout(scrollCoorTime);
+            clearTimeout(scrollCoorTime, timeOutScroll);
+
+             scrollCoor = document.getElementsByClassName("list-items")[0].scrollTop;
 
             // document.getElementsByClassName("list-items")[0].scrollTop = scrollCoor;
 
