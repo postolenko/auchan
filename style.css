@@ -1181,8 +1181,12 @@ select::-ms-expand {
                     font-weight: normal;
                     color: #ffffff;
                     margin: 2px 0 3px 0;
-                    padding: 11px 2px;
+                    padding: 14px 2px;
                     letter-spacing: 1px;
+                }
+
+                .year-tab .calendar-table div {
+                    width: 25%;
                 }
 
                 .calendar-table div.active {
@@ -1205,6 +1209,18 @@ select::-ms-expand {
                     border-radius: 50% 0 0 50%;
                 }
 
+                .year-tab .calendar-header {
+                    display: none;
+                }
+
+                .year-tab .active {
+                    -webkit-border-radius: 30px !important;
+                    -moz-border-radius: 30px !important;
+                    -ms-border-radius: 30px !important;
+                    -o-border-radius: 30px !important;
+                    border-radius: 30px !important;
+                }
+
 
             /*-- /Calendar Table --*/
 
@@ -1213,15 +1229,12 @@ select::-ms-expand {
 
         /* ----- Filters ------ */
 
-        .stories-articles {
-            padding: 5px 0 0 0;
-        }
 
         .filters {
             font-size: 0;
             line-height: 0;
             text-align: center;
-            padding: 0 0 20px 0;
+            padding: 5px 0 20px 0;
         }
 
         .filter-item {

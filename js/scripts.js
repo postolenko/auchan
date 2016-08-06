@@ -89,7 +89,9 @@ $(document).ready(function() {
 
     });
 
-    $(".calendar-table .active:eq(0)").css({
+    for ( var countCalendar = 0; countCalendar <= $(".calendar-table").length - 1; countCalendar++ ) {
+
+            $(".calendar-table:eq("+ countCalendar +") .active:eq(0)").css({
                     "-webkit-border-radius": "50% 0 0 50%",
                     "-moz-border-radius": "50% 0 0 50%",
                     "-ms-border-radius": "50% 0 0 50%",
@@ -97,25 +99,30 @@ $(document).ready(function() {
                     "border-radius": "50% 0 0 50%",
                 });
 
-    $(".calendar-table .active").last().css({
-                    "-webkit-border-radius": "0 50% 50% 0",
-                    "-moz-border-radius": "0 50% 50% 0",
-                    "-ms-border-radius": "0 50% 50% 0",
-                    "-o-border-radius": "0 50% 50% 0",
-                    "border-radius": "0 50% 50% 0",
-                });
+            $(".calendar-table:eq("+ countCalendar +") .active").last().css({
+                            "-webkit-border-radius": "0 50% 50% 0",
+                            "-moz-border-radius": "0 50% 50% 0",
+                            "-ms-border-radius": "0 50% 50% 0",
+                            "-o-border-radius": "0 50% 50% 0",
+                            "border-radius": "0 50% 50% 0",
+                        });
 
-    if( $(".calendar-table .active").length <= 1 ) {
+            if( $(".calendar-table:eq("+ countCalendar +") .active").length <= 1 ) {
 
-        $(".calendar-table .active").css({
-                    "-webkit-border-radius": "50%",
-                    "-moz-border-radius": "50%",
-                    "-ms-border-radius": "50%",
-                    "-o-border-radius": "50%",
-                    "border-radius": "50%",
-                });
+                $(".calendar-table:eq("+ countCalendar +") .active").css({
+                            "-webkit-border-radius": "50%",
+                            "-moz-border-radius": "50%",
+                            "-ms-border-radius": "50%",
+                            "-o-border-radius": "50%",
+                            "border-radius": "50%",
+                        });
+
+            }
+
 
     }
+
+
 
 
     // function getPwidth() {
@@ -256,7 +263,7 @@ $(document).ready(function() {
             
             $(".authorization-modal").css({"margin-top" : "-" + ( $(".authorization-modal").height() / 2 ) + "px" });
 
-            
+
 
         // -----------------------------------
 
