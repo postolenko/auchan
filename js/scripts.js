@@ -5,6 +5,7 @@ $(document).ready(function() {
     e = d.documentElement,
     g = d.getElementsByTagName('body')[0],
     bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
+    bodyHeight = w.innerHeight || e.clientHeight || g.clientHeight;
 
     var countCellCicklum = 0;
     var countTableCell = $(".table-cell").length;
@@ -12,7 +13,7 @@ $(document).ready(function() {
 
 
     // getPwidth();
-
+getElemntsHeight()
 
     $(document).scroll(function() {
 
@@ -26,6 +27,8 @@ $(document).ready(function() {
     $(window).resize(function() {
 
         // getPwidth();
+
+        getElemntsHeight()
 
     });
 
@@ -194,7 +197,7 @@ $(document).ready(function() {
 
             clearTimeout(timeOutScroll);
 
-            console.log(scrollObjectIndex);
+            // console.log(scrollObjectIndex);
 
             scrollCoor = document.getElementsByClassName("scrollwrapp")[scrollObjectIndex].scrollTop;
 
@@ -215,7 +218,7 @@ $(document).ready(function() {
             }, scrollTablesTime);
 
 
-            console.log($(".list-items").height());
+            // console.log($(".list-items").height());
 
         })
         .mouseleave(function() {
@@ -259,13 +262,41 @@ $(document).ready(function() {
 
 
         // -----------------------------------
-
             
             $(".authorization-modal").css({"margin-top" : "-" + ( $(".authorization-modal").height() / 2 ) + "px" });
 
-
-
         // -----------------------------------
+
+
+        function getElemntsHeight() {
+
+            setTimeout(function() {
+
+                bodyHeight = w.innerHeight || e.clientHeight || g.clientHeight;
+
+                var paddingContent = parseInt( $(".content").css("padding-bottom") );
+
+                var scrollBoxMenuTable = document.getElementsByClassName("scrollwrapp")[0];
+
+                var scrollBoxCoor = scrollBoxMenuTable.getBoundingClientRect();
+
+                scrollBoxMenuTable.style.height = (bodyHeight - scrollBoxCoor.top - paddingContent ) + "px";
+
+
+
+                var scrollBox = document.getElementsByClassName("scrollwrapp")[1];
+
+                var scrollBoxCoor = scrollBox.getBoundingClientRect();
+
+                scrollBox.style.height = (bodyHeight - scrollBoxCoor.top - paddingContent- 10 ) + "px";
+
+
+            }, 1000);
+
+
+        }
+
+
 
 
 });

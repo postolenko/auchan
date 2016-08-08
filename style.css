@@ -84,10 +84,10 @@ body {
 
 body {    
     background: rgb(250,252,255);
-/*    -webkit-font-smoothing: subpixel-antialiased !important;
+    -webkit-font-smoothing: subpixel-antialiased !important;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility:    hidden;
-    -ms-backface-visibility:     hidden;*/
+    -ms-backface-visibility:     hidden;
 }
 
 .wrapper {
@@ -193,7 +193,7 @@ a:active {
 
 .row {
     display: block;
-    width: 1130px;
+    max-width: 1130px;
     margin: 0 auto;
 }
 
@@ -317,12 +317,6 @@ select::-ms-expand {
     width: 9%;
 }
 
-.btn-box {
-/*    display: inline-block;
-    vertical-align: middle;
-    width: 9%;*/
-}
-
 .btn-pages {
     display: block;
     width: 54px;
@@ -425,12 +419,20 @@ select::-ms-expand {
     position: relative;
 }
 
-.photo {
+.photo-user {
     display: inline-block;
     vertical-align: middle;
     width: 32%;
     position: relative;
     z-index: 3;
+}
+
+.photo {
+    display: inline-block;
+    vertical-align: middle;
+    width: 55px;
+    margin: 0 auto;
+    position: relative;
 }
 
 .photo-user-wrapp {
@@ -500,8 +502,8 @@ select::-ms-expand {
 .show-user-ac.show-popup.close {
     width: 58px;
     height: 58px;
-    left: 33%;
     top: -1px;
+    left: -1px;
     -webkit-transform: rotate(-180deg);
     -moz-transform: rotate(-180deg);
     -o-transform: rotate(-180deg);
@@ -687,7 +689,6 @@ select::-ms-expand {
         vertical-align: middle;
         position: relative;
         width: 100%;
-        /*height: 100px;*/
         padding: 17px 0 23px 0;
         font-family: "Ubuntu", Arial, Verdana, sans-serif;
         color: #ffffff;
@@ -696,7 +697,7 @@ select::-ms-expand {
         font-weight: 400;
     }
 
-    .modal-user-link.active:after {  /* Проработтать нижний радиус  там гда красная полоса*/
+    .modal-user-link.active:after {
         display: block;
         content: "";
         position: absolute;
@@ -715,7 +716,6 @@ select::-ms-expand {
             z-index: 2;
             position: absolute;
             top: 118%;
-            /*left: -50%;*/
             left: -144px;
             width: 380px;
             padding: 35px 14px 18px 14px;
@@ -784,6 +784,8 @@ select::-ms-expand {
     width: 24%;
     float: left;
     padding: 0 1% 0 0;
+
+    /*display: none;*/
 }
 
 .main-content {
@@ -858,7 +860,6 @@ select::-ms-expand {
             display: inline-block;
             vertical-align: middle;
             width: 69%;
-            /*padding: 18px 0;*/
             padding: 16px 0;
         }
 
@@ -867,8 +868,6 @@ select::-ms-expand {
             vertical-align: middle;
             width: 31%;
             height: 100%;
-            /*padding: 18px 0;*/
-            /*background: rgba(0, 0, 0, .1);*/
             -webkit-border-radius: 0 4px 4px 0;
             -moz-border-radius: 0 4px 4px 0;
             -ms-border-radius: 0 4px 4px 0;
@@ -879,22 +878,14 @@ select::-ms-expand {
         .num-day {
             display: inline-block;
             vertical-align: middle;
-            /*width: 44px;*/
-            /*width: auto;*/
             background: rgba(0, 0, 0, .1);
             margin: 0 -3%;
-            /*padding: 2px 13px;*/
             padding: 3px 13px;
             font-family: "Ubuntu", Arial, Verdana, sans-serif;            
             font-size: 20px;
             line-height: 44px;
             color: #ffffff;
             font-weight: 400;
-/*            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            -ms-border-radius: 50%;
-            -o-border-radius: 50%;
-            border-radius: 50%;*/
              -webkit-border-radius: 23px;
             -moz-border-radius: 23px;
             -ms-border-radius: 23px;
@@ -1135,15 +1126,6 @@ select::-ms-expand {
                     height: 8px;
                 }
 
-
-               /* .right-btn.next {
-                    display: inline-block;
-                    vertical-align: middle;
-                    width: 10%;
-                    background: rgba(29, 47, 59, 1);
-                    border: 1px solid transparent;
-                }*/
-
                 .right-arrow {
                     -webkit-transform: rotate(-90deg);
                     -moz-transform: rotate(-90deg);
@@ -1200,17 +1182,9 @@ select::-ms-expand {
 
                 .calendar-table div.active {
                     background: rgba(237, 28, 36, 1);
-                    /*border-radius: 50% 0 0 50%;*/
                 }
 
                 .calendar-table .active:nth-child(1) {
-/*                    -webkit-border-radius: 0 50% 50% 0;
-                    -moz-border-radius: 0 50% 50% 0;
-                    -ms-border-radius: 0 50% 50% 0;
-                    -o-border-radius: 0 50% 50% 0;
-                    border-radius: 0 50% 50% 0;*/
-                    /*border-radius: 14px 0 0 14px;*/
-                    /*background: rgba(237, 28, 36, 1);*/
                     -webkit-border-radius: 50% 0 0 50%;
                     -moz-border-radius: 50% 0 0 50%;
                     -ms-border-radius: 50% 0 0 50%;
@@ -1454,25 +1428,15 @@ select::-ms-expand {
 
         .scrollwrapp {
             width: 110%;
-            /*height: 448px;*/
-            /*padding: 0 10% 0 0;*/
             padding: 0 8% 0 0;
             overflow-y: scroll;
             overflow-x: hidden;
         }
 
-        .report-table .scrollwrapp {
-            height: 448px;
-        }
-
-        .get-height {
-            /*height: 500px;*/
-        }
-
         .list-items-box .scrollwrapp {
             display: block;
             width: 110%;
-            height: 310px;
+            /*height: 310px;*/
             padding: 0 10% 0 0;
             overflow-y: scroll;
             overflow-x: hidden;
@@ -1480,11 +1444,9 @@ select::-ms-expand {
 
         .list-items {
             display: block;
-            /*width: 115%;*/
             width: 100%;
             height: auto;
             margin: 2% 0 0 0;
-            /*overflow-y: scroll;*/
         }
 
         .list-item {
@@ -1591,16 +1553,18 @@ select::-ms-expand {
         }
 
         .header-page {
-            padding: 0 0 30px 0;
+            /*padding: 0 0 30px 0;*/
             border-bottom: 1px solid #edf0f5;
             font-size: 0;
             line-height: 0;
         }
 
         .header-page-left-col {
-            display: inline-block;
+/*            display: inline-block;
             vertical-align: top;
-            width: 50%;
+            width: 50%;*/
+            display: block;
+            width: 100%;
         }
 
         .page-h {
@@ -1630,9 +1594,11 @@ select::-ms-expand {
         }
 
         .header-page-right-col {
-            display: inline-block;
+/*            display: inline-block;
             vertical-align: bottom;
-            width: 50%;
+            width: 50%;*/
+            display: block;
+            width: 100%;
             position: relative;
         }
 
@@ -1640,9 +1606,9 @@ select::-ms-expand {
             font-size: 0;
             line-height: 0;
             text-align: right;
-            position: absolute;
+/*            position: absolute;
             bottom: -30px;
-            left: 0;
+            left: 0;*/
             width: 100%;
         }
 
@@ -1689,6 +1655,11 @@ select::-ms-expand {
             width: 100%;
         }
 
+        
+        .report-table .scrollwrapp {
+            /*height: 448px;*/
+        }
+
 
         .table-header {
             display: block;
@@ -1705,8 +1676,6 @@ select::-ms-expand {
         .table-header.table-row:hover {
             background: rgba(255, 255, 255, 1);
         }
-
-
 
         .table-row {
             display: inline-block;
@@ -1969,7 +1938,6 @@ select::-ms-expand {
 
     .authorization-modal {
         display: block;
-        /*width: 360px;*/
         width: 30%;
         max-width: 360px;
         height: auto;
