@@ -280,6 +280,37 @@
 				<!-- Левая панель - Сайдбар -->
 
 					<div class="sidebar left wow fadeInLeft animation-delay">
+
+
+						<script>						
+
+							var indexTab = 0;
+
+							var tabAttr;
+
+							var timeItem;
+
+							var activeTab;
+
+							function getCalendarTab(indexTab) {
+
+								$(".times-box .time-item").removeClass("active");
+
+								$(".time-content .tab").css({"display" : "none"});
+
+								timeItem = document.getElementsByClassName("time-item")[indexTab];
+
+								timeItem.classList.add("active");
+
+								tabAttr = timeItem.getAttribute("id");
+
+								activeTab = document.getElementById(tabAttr +"_tab");
+
+								activeTab.style.display = "block";
+
+							}
+
+						</script>
 						
 						<section>
 							
@@ -287,16 +318,16 @@
 								
 								<div class="times">
 									
-									<div class="time-item active" data-item="1">Day</div>
-									<div class="time-item" data-item="2">Week</div>
-									<div class="time-item" data-item="3">Month</div>
-									<div class="time-item" data-item="4">Year</div>
+									<div class="time-item active" id="calendar_1">Day</div>
+									<div class="time-item" id="calendar_2" >Week</div>
+									<div class="time-item" id="calendar_3" >Month</div>
+									<div class="time-item" id="calendar_4" >Year</div>
 
 								</div>
 
 								<div class="time-content clearfix">
 									
-									<div data-item="1">
+									<div class="tab active" id="calendar_1_tab">
 
 										<div>
 
@@ -382,8 +413,7 @@
 
 									</div>
 
-
-									<div data-item="2" style="display: none;">
+									<div class="tab" id="calendar_2_tab">
 										
 										<div>
 
@@ -450,15 +480,15 @@
 
 											</div>
 
-											<div class="calendar-table-wrapp">
+											<div class="calendar-table-wrapp week">
 
 												<div class="calendar-table">
 													
 													<div>01</div> <div>02</div> <div>03</div> <div>04</div> <div>05</div>
 													<div>06</div> <div>07</div> <div>08</div> <div>09</div> <div>10</div>
 													<div>11</div> <div>12</div> <div>13</div> <div>14</div>
-													<div>15</div> <div>16</div> <div class="active">17</div> <div class="active">18</div> <div class="active">19</div>
-													<div class="active">20</div> <div class="active">21</div> <div class="active">22</div> <div class="active">23</div><div>24</div>
+													<div class="active">15</div> <div class="active">16</div> <div class="active">17</div> <div class="active">18</div> <div class="active">19</div>
+													<div class="active">20</div> <div class="active">21</div> <div>22</div> <div>23</div><div>24</div>
 													<div>25</div> <div>26</div> <div>27</div> <div>28</div> <div>29</div>
 
 												</div>
@@ -469,8 +499,7 @@
 
 									</div>
 
-
-									<div data-item="3" style="display: none;">
+									<div class="tab" id="calendar_3_tab">
 										
 										<div>
 
@@ -556,20 +585,20 @@
 									</div>
 
 
-									<div data-item="4" style="display: none;">
+									<div class="tab year-tab" id="calendar_4_tab">
 										
 										<div>
 
 											<div class="left">
 
-												<div class="num-day circle">Apr</div>
+												<div class="num-day circle">2016</div>
 
 												<!-- <div class="num-day circle">23</div> -->
 
 												<div class="year">
 
 													<!-- <p class="year-p">Feb</p> -->
-													<p class="year-p">2016</p>
+													<!-- <p class="year-p">2016</p> -->
 
 												</div>
 
@@ -644,56 +673,6 @@
 									</div>
 
 								</div>
-
-								<!-- <div class="calendar modal-box">
-									
-									<div class="calendar-header">
-
-									<div class="prev-btn-box">
-
-										<button class="arrow-btn prev">
-											
-											<img class="left-arrow" src="img/arrow.svg" alt="">
-
-										</button>
-
-									</div>
-
-									<div class="calendar-h">
-
-										<h2>February</h2>
-
-									</div>
-
-									<div class="next-btn-box">
-
-										<button class="arrow-btn next">
-											
-											<img class="right-arrow" src="img/arrow.svg" alt="">
-
-										</button>
-
-									</div>
-
-									</div>
-
-									<div class="calendar-table-wrapp">
-
-										<div class="calendar-table">
-											
-											<div>01</div> <div>02</div> <div>03</div> <div>04</div> <div>05</div>
-											<div>06</div> <div>07</div> <div>08</div> <div>09</div> <div>10</div>
-											<div>11</div> <div>12</div> <div>13</div> <div>14</div>
-											<div>15</div> <div>16</div> <div>17</div> <div>18</div> <div>19</div>
-											<div class="active">20</div> <div class="active">21</div> <div class="active">22</div> <div class="active">23</div><div class="active">24</div>
-											<div class="active">25</div> <div class="active">26</div> <div>27</div> <div>28</div> <div>29</div>
-
-										</div>
-
-									</div>
-
-								</div> -->
-
 
 							</div>
 
@@ -3008,6 +2987,8 @@
 
 
 		<script src="js/scripts.js"></script>
+
+		<script src="js/calendar.js"></script>
 
 
 	</div>
