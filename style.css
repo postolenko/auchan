@@ -1344,6 +1344,7 @@ select::-ms-expand {
             display: inline-block;
             vertical-align: top;
             position: relative;
+            cursor: pointer;
             font-family: "Ubuntu", Arial, Verdana, sans-serif;
             color: rgba(255, 255, 255, .6);
             font-size: 18px;
