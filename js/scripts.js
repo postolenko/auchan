@@ -19,7 +19,7 @@ $(document).ready(function() {
     var scrollBoxCoor;
 
 
-    getPwidth();
+    // getPwidth();
     getElemntsHeight();
 
     $(document).scroll(function() {
@@ -33,7 +33,7 @@ $(document).ready(function() {
 
     $(window).resize(function() {
 
-        getPwidth();
+        // getPwidth();
 
         getElemntsHeight();
 
@@ -135,21 +135,19 @@ $(document).ready(function() {
 
 
 
-    function getPwidth() {
+    // function getPwidth() {
 
-        for( countCellCicklum = 0; countCellCicklum <= countTableCell - 1; countCellCicklum++ ) {
+    //     for( countCellCicklum = 0; countCellCicklum <= countTableCell - 1; countCellCicklum++ ) {
 
-            widthP = $(".table-cell:eq("+ countCellCicklum +")").width() - $(".table-cell:eq("+ countCellCicklum +") > .product-num-box").width();
+    //         widthP = $(".table-cell:eq("+ countCellCicklum +")").width() - $(".table-cell:eq("+ countCellCicklum +") > .product-num-box").width();
 
-            $(".table-cell:eq("+ countCellCicklum +") .price").css({"width" : widthP + "px" });
+    //         $(".table-cell:eq("+ countCellCicklum +") .price").css({"width" : widthP + "px" });
 
-            console.log(countTableCell + "  " + widthP);
+    //         console.log(countTableCell + "  " + widthP);
 
-        }
+    //     }        
 
-        
-
-    }
+    // }
 
 
     // document.getElementsByClassName("list-items")[0];
