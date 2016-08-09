@@ -168,7 +168,7 @@
 	}
 
 	.main-content {
-		padding: 20px 2% 10px 2%;
+		padding: 20px 0 10px 0;
 	}
 
 	.page-h {
@@ -206,6 +206,22 @@
 
 	.table-header .table-cell {
 	    padding: 0 0 0 1%;
+	}
+
+	.table-row.table-header {
+	    padding: 13px 3%;
+	}
+
+	.table-row {
+	    padding: 15px 3%;
+	}
+
+	.table-cell {
+	    font-size: 14px;
+	}
+
+	.table-cell p {
+	    font-size: 14px;
 	}
 
 

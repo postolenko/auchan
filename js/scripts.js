@@ -328,7 +328,7 @@ $(document).ready(function() {
 
                     var scrollBoxCoor = scrollBox.getBoundingClientRect();
 
-                    scrollBox.style.height = (bodyHeight - scrollBoxCoor.top - paddingContent- 10 ) + "px";
+                    scrollBox.style.height = (bodyHeight - scrollBoxCoor.top - paddingContent ) + "px";
 
                 }
 
