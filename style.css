@@ -193,7 +193,7 @@ a:active {
 
 .row {
     display: block;
-    max-width: 1160px;
+    max-width: 1240px;
     margin: 0 auto;
     padding: 0 1%;
 }
@@ -2279,7 +2279,7 @@ select::-ms-expand {
             vertical-align: top;
             font-family: "Ubuntu", Arial, Verdana, sans-serif;
             color: #a5abb8;
-            font-size: 12px;
+            font-size: 13px;
             line-height: 22px;
             font-weight: 500;
             text-transform: uppercase;
@@ -2288,7 +2288,7 @@ select::-ms-expand {
         }
 
         .table-header .table-cell h2 {
-            font-size: 12px;
+            font-size: 13px;
         }
 
         .table-header .table-cell:last-child {
