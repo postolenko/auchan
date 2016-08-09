@@ -22,6 +22,8 @@ $(document).ready(function() {
     // getPwidth();
     getElemntsHeight();
 
+    // getTableWrappWidth();
+
     $(document).scroll(function() {
 
 // console.log( document.getElementsByClassName("list-items")[0].scrollTop);
@@ -37,12 +39,17 @@ $(document).ready(function() {
 
         getElemntsHeight();
 
+        // getTableWrappWidth();
+
+
+    $(".header-page-right-col").css({"min-height" : $(".header-page-nav-list").height() + parseInt( $(".header-page-nav-list").css("margin-top") ) + "px"});
+
     });
 
 
     $(".calendar-btn").outerHeight($(".time-content").height());
 
-    $(".header-page-right-col").css({"min-height" : $(".header-page-nav-list").height() + "px"});
+    $(".header-page-right-col").css({"min-height" : $(".header-page-nav-list").height() + parseInt( $(".header-page-nav-list").css("margin-top") ) + "px"});
 
 
 
@@ -152,7 +159,7 @@ $(document).ready(function() {
 
     // document.getElementsByClassName("list-items")[0];
 
-    console.log( $(".list-items").height() );
+    // console.log( $(".list-items").height() );
     // document.getElementsByClassName("list-items")[0].scrollHeight = -200;
 
      // document.getElementsByClassName("list-items")[0].scrollTop = 200;
@@ -335,6 +342,7 @@ $(document).ready(function() {
 // ------------------------------------------------------------------
 
 
+
     $(".showsidebar-btn").click(function() {
 
         $(".sidebar").animate({"left" : 0}, 500);
@@ -343,13 +351,23 @@ $(document).ready(function() {
 
     });
 
-    $(".menu-bg, .sidebar").on("swipeleft",function(){
+    $(".menu-bg, .sidebar ").on("swipeleft",function(){
 
         $(".sidebar").animate({"left" : -100 + "%"}, 500);
 
         $(".menu-bg").fadeOut(500);
 
     });
+
+    $(".close-sidebar-btn").click(function(){
+
+        $(".sidebar").animate({"left" : -100 + "%"}, 500);
+
+        $(".menu-bg").fadeOut(500);
+
+    });
+
+
 
     $(".o-decor:eq("+ 1 +")").css({
         "left" : "50%",
@@ -361,6 +379,39 @@ $(document).ready(function() {
         "margin" : "0 0 0 -6px"
     });
 
+
+
+    // ------------------------------------------------------------------
+
+                        // For Mobile Version // 
+
+// ------------------------------------------------------------------
+
+
+
+    // function getTableWrappWidth() {
+
+    //     if (bodyWidth <= 700) {
+
+    //         $(".wrapp-content-320").width( $(window).width() );
+
+    //     }
+
+    // }
+
+
+    $(".show-menu-head-btn").click(function() {
+
+        $(".menu-mob").fadeIn(300);
+
+    });
+
+
+    $(".close-menuh-btn").click(function() {
+
+        $(".menu-mob").fadeOut(300);
+
+    });
 
 
 
