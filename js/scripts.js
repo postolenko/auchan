@@ -7,8 +7,13 @@ $(document).ready(function() {
     bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
     bodyHeight = w.innerHeight || e.clientHeight || g.clientHeight;
 
+    
+
     var countCellCicklum = 0;
     var countTableCell = $(".table-cell").length;
+
+
+
     var widthP;
 
 
@@ -19,30 +24,30 @@ $(document).ready(function() {
     var scrollBoxCoor;
 
 
-    // getPwidth();
+    
     getElemntsHeight();
+
+    // getPwidth();
 
     // getTableWrappWidth();
 
     $(document).scroll(function() {
 
-// console.log( document.getElementsByClassName("list-items")[0].scrollTop);
 
-    // console.log( $(".list-items").scroll() );
 
     });
 
 
-    $(window).resize(function() {
-
-        // getPwidth();
+    $(window).resize(function() {        
 
         getElemntsHeight();
+
+        // getPwidth();
 
         // getTableWrappWidth();
 
 
-    $(".header-page-right-col").css({"min-height" : $(".header-page-nav-list").height() + parseInt( $(".header-page-nav-list").css("margin-top") ) + "px"});
+        $(".header-page-right-col").css({"min-height" : $(".header-page-nav-list").height() + parseInt( $(".header-page-nav-list").css("margin-top") ) + "px"});
 
     });
 
@@ -106,38 +111,66 @@ $(document).ready(function() {
 
     });
 
-    for ( var countCalendar = 0; countCalendar <= $(".calendar-table").length - 1; countCalendar++ ) {
-
-            $(".calendar-table:eq("+ countCalendar +") .active:eq(0)").css({
-                    "-webkit-border-radius": "50% 0 0 50%",
-                    "-moz-border-radius": "50% 0 0 50%",
-                    "-ms-border-radius": "50% 0 0 50%",
-                    "-o-border-radius": "50% 0 0 50%",
-                    "border-radius": "50% 0 0 50%",
-                });
-
-            $(".calendar-table:eq("+ countCalendar +") .active").last().css({
-                            "-webkit-border-radius": "0 50% 50% 0",
-                            "-moz-border-radius": "0 50% 50% 0",
-                            "-ms-border-radius": "0 50% 50% 0",
-                            "-o-border-radius": "0 50% 50% 0",
-                            "border-radius": "0 50% 50% 0",
-                        });
-
-            if( $(".calendar-table:eq("+ countCalendar +") .active").length <= 1 ) {
-
-                $(".calendar-table:eq("+ countCalendar +") .active").css({
-                            "-webkit-border-radius": "50%",
-                            "-moz-border-radius": "50%",
-                            "-ms-border-radius": "50%",
-                            "-o-border-radius": "50%",
-                            "border-radius": "50%",
-                        });
-
-            }
 
 
-    }
+
+
+    // ------------------------------------------------------------------
+
+
+        $(".times .time-item").click(function() {
+
+            var timeAttr = $(this).attr("id");
+
+            $(".times-box .time-item").removeClass("active");
+
+            $(".time-content .tab").css({"display" : "none"});
+
+            $("#" + timeAttr).addClass("active");
+
+            $("#" + timeAttr + "_tab").css({"display" : "block"});
+
+        });
+
+
+
+
+
+        for ( var countCalendar = 0; countCalendar <= $(".calendar-table").length - 1; countCalendar++ ) {
+
+                $(".calendar-table:eq("+ countCalendar +") .active:eq(0)").css({
+                        "-webkit-border-radius": "50% 0 0 50%",
+                        "-moz-border-radius": "50% 0 0 50%",
+                        "-ms-border-radius": "50% 0 0 50%",
+                        "-o-border-radius": "50% 0 0 50%",
+                        "border-radius": "50% 0 0 50%",
+                    });
+
+                $(".calendar-table:eq("+ countCalendar +") .active").last().css({
+                                "-webkit-border-radius": "0 50% 50% 0",
+                                "-moz-border-radius": "0 50% 50% 0",
+                                "-ms-border-radius": "0 50% 50% 0",
+                                "-o-border-radius": "0 50% 50% 0",
+                                "border-radius": "0 50% 50% 0",
+                            });
+
+                if( $(".calendar-table:eq("+ countCalendar +") .active").length <= 1 ) {
+
+                    $(".calendar-table:eq("+ countCalendar +") .active").css({
+                                "-webkit-border-radius": "50%",
+                                "-moz-border-radius": "50%",
+                                "-ms-border-radius": "50%",
+                                "-o-border-radius": "50%",
+                                "border-radius": "50%",
+                            });
+
+                }
+
+
+        }
+
+
+    // ------------------------------------------------------------------
 
 
 
@@ -150,20 +183,9 @@ $(document).ready(function() {
 
     //         $(".table-cell:eq("+ countCellCicklum +") .price").css({"width" : widthP + "px" });
 
-    //         console.log(countTableCell + "  " + widthP);
-
     //     }        
 
     // }
-
-
-    // document.getElementsByClassName("list-items")[0];
-
-    // console.log( $(".list-items").height() );
-    // document.getElementsByClassName("list-items")[0].scrollHeight = -200;
-
-     // document.getElementsByClassName("list-items")[0].scrollTop = 200;
-
 
 
     var scrollCoorTime;
@@ -177,10 +199,6 @@ $(document).ready(function() {
     $( ".scroll-box" )
 
         .mousewheel(function() {
-
-            console.log("true");           
-
-            // document.getElementsByClassName("list-items")[0].scrollTop = "";
 
             clearTimeout(scrollCoorTime, timeOutScroll);
 
@@ -207,10 +225,6 @@ $(document).ready(function() {
 
             scrollObjectIndex = $(".scroll-box").index(this);
 
-            clearTimeout(timeOutScroll);
-
-            // console.log(scrollObjectIndex);
-
             scrollCoor = document.getElementsByClassName("scrollwrapp")[scrollObjectIndex].scrollTop;
 
             scrollCoorTime = setInterval(function() {
@@ -230,16 +244,12 @@ $(document).ready(function() {
             }, scrollTablesTime);
 
 
-            // console.log($(".list-items").height());
-
         })
         .mouseleave(function() {
 
             clearTimeout(scrollCoorTime, timeOutScroll);
 
              scrollCoor = document.getElementsByClassName("scrollwrapp")[scrollObjectIndex].scrollTop;
-
-            // document.getElementsByClassName("list-items")[0].scrollTop = scrollCoor;
 
         });
 
@@ -255,29 +265,6 @@ $(document).ready(function() {
             }, 35);
 
         }
-
-        // var countGetHeightBlocks = $(".get-height").lenght;
-        // var countforGetHight = 0;
-
-        // getElemntsHeight();
-
-        // function getElemntsHeight() {
-
-        //     for(countforGetHight = 0; countforGetHight <= countGetHeightBlocks - 1; countforGetHight++ ) {
-
-        //         $(".get-height:eq("+ countforGetHight +")").outerHeight( $(window).height() - $(".get-height:eq("+ countforGetHight +")").offset().top );
-
-        //     }
-
-        // }
-
-
-
-        // -----------------------------------
-            
-            $(".authorization-modal").css({"margin-top" : "-" + ( $(".authorization-modal").height() / 2 ) + "px" });
-
-        // -----------------------------------
 
 
         function getElemntsHeight() {
@@ -335,6 +322,23 @@ $(document).ready(function() {
 
         }
 
+
+
+
+// ------------------------------------------------------------------------------------------------------------
+    
+
+    $(".authorization-modal").css({"margin-top" : "-" + ( $(".authorization-modal").height() / 2 ) + "px" });
+
+
+// ------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
 // ------------------------------------------------------------------
 
                         // For Tablet Version // 
@@ -381,11 +385,11 @@ $(document).ready(function() {
 
 
 
-    // ------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------
 
                         // For Mobile Version // 
 
-// ------------------------------------------------------------------
+// ---------------------------------------------------------------------------------------------------------
 
 
 
@@ -416,7 +420,9 @@ $(document).ready(function() {
 
 
 
-        $.mobile.loading().hide();
+// ----------------------------------
+
+        // $.mobile.loading().hide();
 
 
 

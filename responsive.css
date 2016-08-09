@@ -224,6 +224,54 @@
 	    font-size: 14px;
 	}
 
+	/*--  Authorisation  --*/
+
+
+		.authorization-modal {
+			min-width: 280px;
+			width: 100%;
+		}
+
+		.enter-modal-top-row {
+	        background: rgba(244, 247, 250, 1);
+	    }
+
+	    .enter-modal-header {
+		    text-align: left;
+		}
+
+		.enter-modal-header .logo-img {
+	        width: 140px;
+	    }
+
+	    .switch-lang {
+	        margin: -18px 15px 0 0;
+	    }
+
+		.enter-form {
+	        padding: 80px 0 0 0;
+	    }
+
+		.enter-form input {
+			padding: 17px 0;
+			font-size: 16px;
+			min-height: 57px;
+		}
+
+		input.enter-name {
+			margin: 26px auto;
+		}
+
+		.error-box-wrapp {
+			height: 160px;
+		}
+
+		input.enter-btn,
+		button.enter-btn {
+			padding: 20px 1px;
+			font-size: 18px;
+		}
+
 
 }
 

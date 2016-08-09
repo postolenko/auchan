@@ -1,33 +1,22 @@
-$(document).ready(function() {
-
-	var indexTab = 0;
+// $(document).ready(function() {
 
 
-	var countTimes = document.getElementsByClassName("time-item").length;
+	// $(".time-item").click( function() {
 
-	var countTimesFor = 0;
+	// 	console.log( $(".time-item").index() ) ;
 
-	// console.log(countTimes);
+	// });
 
-	for ( countTimesFor = 0; countTimesFor <= countTimes - 1; ++countTimesFor ) {
+	// var countTimes = document.getElementsByClassName("time-item").length;
 
-		// $(".time-item:eq("+ countTimesFor +")").attr("onclick","getCalendarTab()");
+	// var countTimesFor = 0;
 
-		$(".time-item:eq("+ countTimesFor +")").attr("onclick"," getCalendarTab("+countTimesFor+") ");
-
-	}
+	// for ( countTimesFor = 0; countTimesFor <= countTimes - 1; ++countTimesFor ) {
 
 
-
-
-	// function getCalendarTab(indexTab) {
-
-	// 	console.log(indexTab);
+	// 	$(".time-item:eq("+ countTimesFor +")").attr("onclick"," getCalendarTab("+countTimesFor+") ");
 
 	// }
 
 
-
-
-
-});
+// });
