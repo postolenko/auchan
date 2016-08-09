@@ -330,7 +330,38 @@ $(document).ready(function() {
 
         }
 
+// ------------------------------------------------------------------
 
+                        // For Tablet Version // 
+
+// ------------------------------------------------------------------
+
+
+    $(".showsidebar-btn").click(function() {
+
+        $(".sidebar").animate({"left" : 0}, 500);
+
+        $(".menu-bg").fadeIn(500);
+
+    });
+
+    $(".menu-bg, .sidebar").on("swipeleft",function(){
+
+        $(".sidebar").animate({"left" : -100 + "%"}, 500);
+
+        $(".menu-bg").fadeOut(500);
+
+    });
+
+    $(".o-decor:eq("+ 1 +")").css({
+        "left" : "50%",
+        "margin" : "0 0 0 -3px"
+    });
+
+    $(".o-decor:eq("+ 2 +")").css({
+        "left" : 100 + "%",
+        "margin" : "0 0 0 -6px"
+    });
 
 
 
