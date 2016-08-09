@@ -12,8 +12,15 @@ $(document).ready(function() {
     var widthP;
 
 
+    var countScrollWrapp;
+    var countScrollWrappFor;
+    var paddingContent;
+    var scrollBox;
+    var scrollBoxCoor;
+
+
     // getPwidth();
-getElemntsHeight()
+    getElemntsHeight();
 
     $(document).scroll(function() {
 
@@ -28,7 +35,7 @@ getElemntsHeight()
 
         // getPwidth();
 
-        getElemntsHeight()
+        getElemntsHeight();
 
     });
 
@@ -270,31 +277,66 @@ getElemntsHeight()
 
         function getElemntsHeight() {
 
-            setTimeout(function() {
+
+                // countScrollWrapp = document.getElementsByClassName("scrollwrapp").length;
+
+                // countScrollWrappFor = 0;
 
                 bodyHeight = w.innerHeight || e.clientHeight || g.clientHeight;
 
-                var paddingContent = parseInt( $(".content").css("padding-bottom") );
+                paddingContent = parseInt( $(".content").css("padding-bottom") );
+
+                // for ( countScrollWrappFor = 0; countScrollWrappFor <= countScrollWrapp - 1; ++countScrollWrappFor ) {
+
+                //     var scrollBox = document.getElementsByClassName("scrollwrapp")[countScrollWrappFor];
+
+                //     if( scrollBox ) {
+                    
+                //         scrollBoxCoor = scrollBox.getBoundingClientRect();
+
+                //         if (countScrollWrappFor == 0) {
+
+                //             paddingContent = 0;
+
+                //         } else {
+
+                //             paddingContent = parseInt( $(".content").css("padding-bottom") );                            
+
+                //         }
+
+                //         scrollBox.style.height = (bodyHeight - scrollBoxCoor.top - paddingContent) + "px";
+    
+                //     }
+
+                // }
 
                 var scrollBoxMenuTable = document.getElementsByClassName("scrollwrapp")[0];
 
-                var scrollBoxCoor = scrollBoxMenuTable.getBoundingClientRect();
-
-                scrollBoxMenuTable.style.height = (bodyHeight - scrollBoxCoor.top - paddingContent ) + "px";
-
-
-
                 var scrollBox = document.getElementsByClassName("scrollwrapp")[1];
 
-                var scrollBoxCoor = scrollBox.getBoundingClientRect();
+                if( scrollBoxMenuTable && scrollBox ) {
 
-                scrollBox.style.height = (bodyHeight - scrollBoxCoor.top - paddingContent- 10 ) + "px";
+                    var scrollBoxCoor = scrollBoxMenuTable.getBoundingClientRect();
+
+                    scrollBoxMenuTable.style.height = (bodyHeight - scrollBoxCoor.top - paddingContent ) + "px";
 
 
-            }, 1000);
+                    var scrollBoxCoor = scrollBox.getBoundingClientRect();
+
+                    scrollBox.style.height = (bodyHeight - scrollBoxCoor.top - paddingContent- 10 ) + "px";
+
+                }
 
 
         }
+
+
+
+
+
+
+
+        $.mobile.loading().hide();
 
 
 
