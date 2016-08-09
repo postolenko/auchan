@@ -2279,12 +2279,16 @@ select::-ms-expand {
             vertical-align: top;
             font-family: "Ubuntu", Arial, Verdana, sans-serif;
             color: #a5abb8;
-            font-size: 13px;
+            font-size: 12px;
             line-height: 22px;
             font-weight: 500;
             text-transform: uppercase;
             text-align: left;
             padding: 0 0 0 30px;
+        }
+
+        .table-header .table-cell h2 {
+            font-size: 12px;
         }
 
         .table-header .table-cell:last-child {
