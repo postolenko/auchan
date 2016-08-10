@@ -25,13 +25,21 @@
 
 	<script type="text/javascript" src="vendors/js/jquery.js"></script>
 	<script type="text/javascript" src="vendors/js/jquery.mousewheel.min.js"></script>
+
+	<script>
+
+	    $(document).bind('mobileinit',function(){
+	        $.mobile.pushStateEnabled = false;
+	    });
+
+	</script>
+
 	<script type="text/javascript" src="vendors/js/jquery.mobile.js"></script>
+
+
 	<script type="text/javascript" src="vendors/js/wow.min.js"></script>
-
-
 	<script>new WOW().init();</script>
 
-	<!-- <script type="text/javascript" src="js/calendar_tab.js"></script> -->
 
 	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">
 	
@@ -54,9 +62,9 @@
 
 				<button class="showsidebar-btn">
 					
-					<div><span class="o-decor"></span></div>
-					<div><span class="o-decor"></span></div>
-					<div><span class="o-decor"></span></div>
+					<p><span class="o-decor"></span></p>
+					<p><span class="o-decor"></span></p>
+					<p><span class="o-decor"></span></p>
 
 				</button><!-- /Кнопка для показа боковое меню -->
 
@@ -69,7 +77,7 @@
 
 						<a class="logo-link wow fadeInDown animation-delay" href="/">
 						<!-- Логотип -->
-							<img class="logo-img" src="img/logo.png" / >
+							<img class="logo-img" src="img/logo.png" >
 
 						</a>
 
@@ -112,13 +120,13 @@
 
 							<button class="btn-pages show-popup">
 
-								<div class="icons-box">
+								<p class="icons-box">
 
 									<span></span><span></span><span></span>
 									<span></span><span></span><span></span>
 									<span></span><span></span><span></span>
 
-								</div>
+								</p>
 
 							</button>
 
@@ -228,13 +236,13 @@
 
 								<div class="photo-user-wrapp">
 
-									<img class="photo-user-img" src="img/photo_user.png" />
+									<img class="photo-user-img" src="img/photo_user.png" alt="User photo" >
 
 								</div>
 
 								<button class="show-user-ac show-popup">
 										
-									<img src="img/arrow.svg" alt="">
+									<img src="img/arrow.svg" alt="show user account block">
 										
 								</button>
 
@@ -338,7 +346,7 @@
 
 					<div class="photo-user">
 
-						<img class="photo-user-img" src="img/photo_user.png">
+						<img class="photo-user-img" src="img/photo_user.png" alt="User photo" >
 
 					</div>
 
@@ -477,89 +485,6 @@
 
 	<!-- /Header -->
 
-
-			<div class="authorization-modal-bg">
-
-				<!-- Блок " login-pass " можно удалить 
-
-					Демонстрационный скрипт того как это работает находится по адресу
-
-					js/demonstration.js
-
-				 -->
-
-			<div class="login-pass" style="position:fixed; top: 2%; left: 3%;">
-				
-				<h2>Для входа на сайт введите<br> login: admin <br> password: admin</h2>
-
-			</div>
-			
-			<div class="authorization-modal wow zoomIn">
-				
-				<div class="enter-modal-top-row">
-
-					<div class="enter-modal-header clearfix">
-
-						<div class="logo-img-box">
-
-							<img class="logo-img" src="img/logo.png">
-
-						</div>
-
-						<div class="switch-lang">
-
-							<button class="switch-lang-btn show-popup">En</button>
-
-							<ul class="languages modal-box">
-
-								<li><a class="lang">Ru</a></li>
-								<li><a class="lang">Fr</a></li>
-								<li><a class="lang active">En</a></li>
-
-							</ul>
-
-						</div>
-
-					</div>
-
-				</div>
-
-				<div class="enter-form">
-					
-					<form>
-						
-						<input class="enter-name" type="text" placeholder="Username" data-item="1" >
-
-						<input class="enter-pass" type="password" placeholder="Password" data-item="2">
-
-						<div class="error-box-wrapp">
-
-							<div class="error-box">
-								
-								<i class="err-icon">!</i>
-
-								<h2 class="err-txt inc-login" data-item="1" >Incorrect login</h2>
-
-								<h2 class="err-txt inc-pass" data-item="2" >Incorrect password</h2>		
-
-							</div>
-
-						</div>
-
-						<input class="enter-btn" type="button" value="Login">
-						<!-- <button class="enter-btn">Login</button> -->
-
-					</form>
-
-				</div>
-
-			</div>
-
-		</div>
-
-
-	
-
 		<!-- Content -->
 			<div class="content">
 
@@ -612,11 +537,11 @@
 
 												<button class="calendar-btn show-popup">
 
-													<div class="calendar-icon">
+													<p class="calendar-icon">
 															<!-- Добавлена svg иконка календаря вместо тега <i ></i> -->
 														<img src="img/calendar.svg" alt="Calendar">
 
-													</div>
+													</p>
 
 												</button>
 
@@ -698,11 +623,11 @@
 
 												<button class="calendar-btn show-popup">
 
-													<div class="calendar-icon">
+													<p class="calendar-icon">
 															<!-- Добавлена svg иконка календаря вместо тега <i ></i> -->
 														<img src="img/calendar.svg" alt="Calendar">
 
-													</div>
+													</p>
 
 												</button>
 
@@ -784,11 +709,11 @@
 
 												<button class="calendar-btn show-popup">
 
-													<div class="calendar-icon">
+													<p class="calendar-icon">
 															<!-- Добавлена svg иконка календаря вместо тега <i ></i> -->
 														<img src="img/calendar.svg" alt="Calendar">
 
-													</div>
+													</p>
 
 												</button>
 
@@ -870,11 +795,11 @@
 
 												<button class="calendar-btn show-popup">
 
-													<div class="calendar-icon">
+													<p class="calendar-icon">
 															<!-- Добавлена svg иконка календаря вместо тега <i ></i> -->
 														<img src="img/calendar.svg" alt="Calendar">
 
-													</div>
+													</p>
 
 												</button>
 
@@ -947,8 +872,8 @@
 								
 								<div class="filters-list">
 									
-									<a hre="" class="filter-item active" data-item="1">Stories</a>
-									<a hre="" class="filter-item" data-item="2">Articles</a>
+									<a href="" class="filter-item active" data-item="1">Stories</a>
+									<a href="" class="filter-item" data-item="2">Articles</a>
 
 								</div>
 
@@ -995,7 +920,7 @@
 
 											<button class="search-btn">
 													<!-- Добавлена svg иконка лупы вместо тега <i ></i> -->
-												<img class="search-icon" src="img/search.svg"> 
+												<img class="search-icon" src="img/search.svg" alt="Search"> 
 
 											</button>
 										
@@ -3261,11 +3186,6 @@
 
 
 		<script src="js/scripts.js"></script>
-
-		<script src="js/demonstration.js"></script>
-
-		<!-- <script src="js/calendar.js"></script> -->
-
 		
 	</div>
 

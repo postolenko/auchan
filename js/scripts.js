@@ -7,25 +7,39 @@ $(document).ready(function() {
     bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
     bodyHeight = w.innerHeight || e.clientHeight || g.clientHeight;
 
+
+
+    var countCellCicklum = 0; // переменная для цыкла 
+    var countTableCell = $(".table-cell").length;  // количество ячеек в таблице
     
-
-    var countCellCicklum = 0;
-    var countTableCell = $(".table-cell").length;
+    var widthP;  //  Ширина левой ячейки с текстом в таблице
 
 
+    var timeAttr; // атрибут пункта времени года
 
-    var widthP;
 
 
-    var countScrollWrapp;
-    var countScrollWrappFor;
-    var paddingContent;
-    var scrollBox;
-    var scrollBoxCoor;
+
+    // var scrollBoxMenuTable;     // таблица со скроллом
+
+    // var paddingContent;         // нижний отступ контента
+    // var scrollBox;              // блок со скроллом
+    // var scrollBoxCoor;          // кордината блока со скроллом
+
+
+
+    var scrollCoorTime;  
+    var timeOutScroll;   
+
+    var scrollObjectIndex; // индекс элемента с анимацией скролла
+    var scrollTablesTime = 35;  // время анимаии скролла
+
+    var scrollCoor = 0;  // координата элемента с скроллом
+
 
 
     
-    getElemntsHeight();
+    getElemntsHeight();  // получение высоты элементов
 
     // getPwidth();
 
@@ -40,7 +54,7 @@ $(document).ready(function() {
 
     $(window).resize(function() {        
 
-        getElemntsHeight();
+        getElemntsHeight();  // получение высоты элементов
 
         // getPwidth();
 
@@ -51,18 +65,23 @@ $(document).ready(function() {
 
     });
 
-
-    $(".calendar-btn").outerHeight($(".time-content").height());
-
-    $(".header-page-right-col").css({"min-height" : $(".header-page-nav-list").height() + parseInt( $(".header-page-nav-list").css("margin-top") ) + "px"});
+        $(".header-page-right-col").css({"min-height" : $(".header-page-nav-list").height() + parseInt( $(".header-page-nav-list").css("margin-top") ) + "px"});
 
 
 
 
+    $(".calendar-btn").outerHeight($(".time-content").height());  // вычисление высоты кнопки календаря
 
-    var indexModalBox;
-    var topCoorDefault;
-    var topCoor;
+
+
+    // ------------------------------------------------------------------------------
+
+    // Скрипт для попапов
+
+
+    var indexModalBox;  // инжекс модального окна
+    var topCoor;        // верхняя координата модального окна
+
 
     $(".show-popup").click(function() {
 
@@ -113,10 +132,14 @@ $(document).ready(function() {
 
 
 
-
-
     // ------------------------------------------------------------------
 
+
+    // Скрипт календаря 
+
+    // var timeAttr
+
+        //  Отображение контента в панели
 
         $(".times .time-item").click(function() {
 
@@ -134,7 +157,7 @@ $(document).ready(function() {
 
 
 
-
+        // Определение радиусов закругления ячеек
 
         for ( var countCalendar = 0; countCalendar <= $(".calendar-table").length - 1; countCalendar++ ) {
 
@@ -173,9 +196,9 @@ $(document).ready(function() {
     // ------------------------------------------------------------------
 
 
+    // получение ширины левой ячейки с текстом в таблице
 
-
-    // function getPwidth() {
+    // function getPwidth() {   
 
     //     for( countCellCicklum = 0; countCellCicklum <= countTableCell - 1; countCellCicklum++ ) {
 
@@ -187,14 +210,17 @@ $(document).ready(function() {
 
     // }
 
+    // --------------------------------------------------------------------
 
-    var scrollCoorTime;
-    var timeOutScroll;
+        // Скрипт для скролла таблицы 
 
-    var scrollObjectIndex;
-    var scrollTablesTime = 35;
+    // var scrollCoorTime;
+    // var timeOutScroll;
 
-    var scrollCoor = 0;
+    // var scrollObjectIndex;
+    // var scrollTablesTime = 35;
+
+    // var scrollCoor = 0;
 
     $( ".scroll-box" )
 
@@ -202,23 +228,7 @@ $(document).ready(function() {
 
             clearTimeout(scrollCoorTime, timeOutScroll);
 
-            // timeOutScroll = setTimeout(function() {
-
-            //     scrollCoor = document.getElementsByClassName("list-items")[0].scrollTop;
-
-            //     // getScrollEvent(scrollCoor);
-
-            //     scrollCoorTime = setInterval(function() {
-
-            //         scrollCoor++;
-
-            //         document.getElementsByClassName("list-items")[0].scrollTop = scrollCoor;
-
-            //     }, 35);
-
-            // }, 6000);
-
-             scrollCoor = document.getElementsByClassName("scrollwrapp")[scrollObjectIndex].scrollTop;
+            scrollCoor = document.getElementsByClassName("scrollwrapp")[scrollObjectIndex].scrollTop;
 
         })
         .mouseenter(function() {
@@ -254,70 +264,46 @@ $(document).ready(function() {
         });
 
 
-        function getScrollEvent(scrollCoor) {
+// --------------------------------------------------------------------------------
 
-            scrollCoorTime = setInterval(function() {
+    var scrollBoxMenuTable;     // таблица со скроллом
 
-                scrollCoor++;
+    var paddingContent;         // нижний отступ контента
+    var scrollBox;              // блок со скроллом
+    var scrollBoxCoor;          // кордината блока со скроллом
 
-                document.getElementsByClassName("scrollwrapp")[scrollObjectIndex].scrollTop = scrollCoor;
+    var scrollBoxTableCoor;
 
-            }, 35);
-
-        }
-
+    // Получение высоты элементов
 
         function getElemntsHeight() {
 
 
-                // countScrollWrapp = document.getElementsByClassName("scrollwrapp").length;
+                setTimeout(function() {
 
-                // countScrollWrappFor = 0;
+                    bodyHeight = w.innerHeight || e.clientHeight || g.clientHeight;
 
-                bodyHeight = w.innerHeight || e.clientHeight || g.clientHeight;
+                    marginContent = parseInt( $(".content").css("margin-bottom") );
 
-                paddingContent = parseInt( $(".content").css("padding-bottom") );
+                    scrollBoxMenuTable = document.getElementsByClassName("scrollwrapp")[0];
 
-                // for ( countScrollWrappFor = 0; countScrollWrappFor <= countScrollWrapp - 1; ++countScrollWrappFor ) {
+                    scrollBox = document.getElementsByClassName("scrollwrapp")[1];
 
-                //     var scrollBox = document.getElementsByClassName("scrollwrapp")[countScrollWrappFor];
+                    if( scrollBoxMenuTable && scrollBox ) {
 
-                //     if( scrollBox ) {
-                    
-                //         scrollBoxCoor = scrollBox.getBoundingClientRect();
+                        scrollBoxCoor = scrollBoxMenuTable.getBoundingClientRect();
 
-                //         if (countScrollWrappFor == 0) {
-
-                //             paddingContent = 0;
-
-                //         } else {
-
-                //             paddingContent = parseInt( $(".content").css("padding-bottom") );                            
-
-                //         }
-
-                //         scrollBox.style.height = (bodyHeight - scrollBoxCoor.top - paddingContent) + "px";
-    
-                //     }
-
-                // }
-
-                var scrollBoxMenuTable = document.getElementsByClassName("scrollwrapp")[0];
-
-                var scrollBox = document.getElementsByClassName("scrollwrapp")[1];
-
-                if( scrollBoxMenuTable && scrollBox ) {
-
-                    var scrollBoxCoor = scrollBoxMenuTable.getBoundingClientRect();
-
-                    scrollBoxMenuTable.style.height = (bodyHeight - scrollBoxCoor.top - paddingContent ) + "px";
+                        scrollBoxMenuTable.style.height = (bodyHeight - scrollBoxCoor.top - marginContent ) + "px";
 
 
-                    var scrollBoxCoor = scrollBox.getBoundingClientRect();
+                        scrollBoxTableCoor = scrollBox.getBoundingClientRect();
 
-                    scrollBox.style.height = (bodyHeight - scrollBoxCoor.top - paddingContent- 10 ) + "px";
+                        scrollBox.style.height = (bodyHeight - scrollBoxTableCoor.top - marginContent - 10 ) + "px";
 
-                }
+                    }
+
+
+                }, 300);
 
 
         }
@@ -326,15 +312,12 @@ $(document).ready(function() {
 
 
 // ------------------------------------------------------------------------------------------------------------
-    
+    // Вычисление отступа от верхнего края окна браузера модального окна для авторизации    
 
     $(".authorization-modal").css({"margin-top" : "-" + ( $(".authorization-modal").height() / 2 ) + "px" });
 
 
 // ------------------------------------------------------------------------------------------------------------
-
-
-
 
 
 
@@ -346,43 +329,48 @@ $(document).ready(function() {
 // ------------------------------------------------------------------
 
 
+        // Скрипт для сайдбара при планшетной и мобильной версии
 
-    $(".showsidebar-btn").click(function() {
+        $(".showsidebar-btn").click(function() {
 
-        $(".sidebar").animate({"left" : 0}, 500);
+            $(".sidebar").animate({"left" : 0}, 500);
 
-        $(".menu-bg").fadeIn(500);
+            $(".menu-bg").fadeIn(500);
 
-    });
+        });
 
-    $(".menu-bg, .sidebar ").on("swipeleft",function(){
+        $(".menu-bg, .sidebar ").on("swipeleft",function(){
 
-        $(".sidebar").animate({"left" : -100 + "%"}, 500);
+            $(".sidebar").animate({"left" : -100 + "%"}, 500);
 
-        $(".menu-bg").fadeOut(500);
+            $(".menu-bg").fadeOut(500);
 
-    });
+        });
 
-    $(".close-sidebar-btn").click(function(){
+        $(".close-sidebar-btn").click(function(){
 
-        $(".sidebar").animate({"left" : -100 + "%"}, 500);
+            $(".sidebar").animate({"left" : -100 + "%"}, 500);
 
-        $(".menu-bg").fadeOut(500);
+            $(".menu-bg").fadeOut(500);
 
-    });
+        });
 
 
 
-    $(".o-decor:eq("+ 1 +")").css({
-        "left" : "50%",
-        "margin" : "0 0 0 -3px"
-    });
 
-    $(".o-decor:eq("+ 2 +")").css({
-        "left" : 100 + "%",
-        "margin" : "0 0 0 -6px"
-    });
+            // ------------------------------
 
+            $(".o-decor:eq("+ 1 +")").css({
+                "left" : "50%",
+                "margin" : "0 0 0 -3px"
+            });
+
+            $(".o-decor:eq("+ 2 +")").css({
+                "left" : 100 + "%",
+                "margin" : "0 0 0 -6px"
+            });
+
+            // ------------------------------
 
 
 // ---------------------------------------------------------------------------------------------------------
@@ -392,17 +380,7 @@ $(document).ready(function() {
 // ---------------------------------------------------------------------------------------------------------
 
 
-
-    // function getTableWrappWidth() {
-
-    //     if (bodyWidth <= 700) {
-
-    //         $(".wrapp-content-320").width( $(window).width() );
-
-    //     }
-
-    // }
-
+    // Показ и скрытие верхнего меню при мобильной версии
 
     $(".show-menu-head-btn").click(function() {
 
@@ -422,7 +400,7 @@ $(document).ready(function() {
 
 // ----------------------------------
 
-        // $.mobile.loading().hide();
+        $.mobile.loading().hide();  // скрытие сообщения Loading.
 
 
 

@@ -78,36 +78,40 @@ html {
 
 html,
 body {
-    height: 100%;
+    min-height: 100%;
     min-width: 100%;
 }
 
 body {    
+
     background: rgb(250,252,255);
+
     -webkit-font-smoothing: subpixel-antialiased !important;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility:    hidden;
     -ms-backface-visibility:     hidden;
-}
-
-.wrapper {
-    /*display: table;*/
-    /*height: 100%;*/
-    min-height: 100%;
-    min-width: 100%;
 
     background: -moz-linear-gradient(top,  rgba(250,252,255,1) 0%, rgba(234,237,242,1) 100%);
     background: -webkit-linear-gradient(top,  rgba(250,252,255,1) 0%,rgba(234,237,242,1) 100%);
     background: linear-gradient(to bottom,  rgba(250,252,255,1) 0%,rgba(234,237,242,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafcff', endColorstr='#eaedf2',GradientType=0 );
+
+}
+
+.wrapper {
+    /*display: table;*/
+    min-height: 100%;
+    min-width: 100%;
 }
 
 
 .content {
     position: relative;
     /*display: table-row;*/
+    height: 100%;
     min-height: 100%;
-    padding: 35px 0;
+    margin: 0 0 20px 0;
+    padding: 35px 0 0 0;
 }
 
 .clearfix:after {
@@ -187,6 +191,7 @@ a:active {
     -webkit-tap-highlight-color: rgba(0,0,0,0); 
     -webkit-tap-highlight-color: transparent;
 }
+
 /*-------------------------------------------*/
 /* ----- REUSABLE COMPONENTS ------ */
 /*-------------------------------------------*/
@@ -265,7 +270,7 @@ select::-ms-expand {
     padding: 0 1%;
     position: absolute;
     top: -23px;
-    left: 0;
+    right: 10px;
 }
 
 .lang-item {
@@ -315,7 +320,7 @@ select::-ms-expand {
     position: relative;
     display: inline-block;
     vertical-align: middle;
-    width: 9%;
+    width: 10%;
 }
 
 .btn-pages {
@@ -426,6 +431,7 @@ select::-ms-expand {
     width: 32%;
     position: relative;
     z-index: 3;
+    padding: 0 2%;
 }
 
 .photo {
@@ -504,7 +510,7 @@ select::-ms-expand {
     width: 58px;
     height: 58px;
     top: -1px;
-    left: -1px;
+    left: -2px;
     -webkit-transform: rotate(-180deg);
     -moz-transform: rotate(-180deg);
     -o-transform: rotate(-180deg);
@@ -540,11 +546,11 @@ select::-ms-expand {
 
     .modal-user-box {
         display: none;
-        width: 465px; /*  %   */
+        width: 465px;
 
         position: absolute;
         top: 110%;
-        left: -70%;
+        right: 0%;
         z-index: 2;
         text-align: left;
         opacity: 0;
@@ -1249,7 +1255,7 @@ select::-ms-expand {
         box-shadow: 0px 15px 35px 0px rgba(237, 28, 36, .35);
     }
 
-    .showsidebar-btn div {
+    .showsidebar-btn p {
         display: block;
         width: 20px;
         height: 2px;
@@ -1258,7 +1264,7 @@ select::-ms-expand {
         margin: 4px auto;
     }
 
-    .showsidebar-btn div span.o-decor {
+    .showsidebar-btn p span.o-decor {
         display: block;
         width: 6px;
         height: 6px;
@@ -1368,7 +1374,7 @@ select::-ms-expand {
             vertical-align: middle;
             background: rgba(0, 0, 0, .1);
             margin: 0 -3%;
-            padding: 3px 13px;
+            padding: 2px 13px;
             font-family: "Ubuntu", Arial, Verdana, sans-serif;            
             font-size: 20px;
             line-height: 44px;
@@ -2070,6 +2076,7 @@ select::-ms-expand {
 
         .main-content {
             background: rgba(255, 255, 255, 1);
+            margin: 6px 0 0 0;
             padding: 40px 2% 10px 2%;
             -webkit-border-radius: 4px 4px 4px 4px;
             -moz-border-radius: 4px 4px 4px 4px;
