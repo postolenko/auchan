@@ -41,7 +41,9 @@ $(document).ready(function() {
     
     getElemntsHeight();  // получение высоты элементов
 
-    // getPwidth();
+    getTableRowWidth();
+
+    getPwidth();
 
     // getTableWrappWidth();
 
@@ -56,7 +58,9 @@ $(document).ready(function() {
 
         getElemntsHeight();  // получение высоты элементов
 
-        // getPwidth();
+        getTableRowWidth();
+
+        getPwidth();
 
         // getTableWrappWidth();
 
@@ -196,19 +200,30 @@ $(document).ready(function() {
     // ------------------------------------------------------------------
 
 
+    // получение ширины строки таблицы
+
+    function getTableRowWidth() {
+
+        $(".table-row").width( $(".report-table").width() - parseInt(  $(".table-row").css("padding-left")  ) * 2 );
+
+    }
+
+
     // получение ширины левой ячейки с текстом в таблице
 
-    // function getPwidth() {   
+    function getPwidth() {   
 
-    //     for( countCellCicklum = 0; countCellCicklum <= countTableCell - 1; countCellCicklum++ ) {
+        for( countCellCicklum = 0; countCellCicklum <= countTableCell - 1; countCellCicklum++ ) {
 
-    //         widthP = $(".table-cell:eq("+ countCellCicklum +")").width() - $(".table-cell:eq("+ countCellCicklum +") > .product-num-box").width();
+            widthP = $(".table-cell:eq("+ countCellCicklum +")").width() - $(".table-cell:eq("+ countCellCicklum +") > .product-num-box").width();
 
-    //         $(".table-cell:eq("+ countCellCicklum +") .price").css({"width" : widthP + "px" });
+            $(".table-header .table-cell-block:eq("+ countCellCicklum +") h2").css({"width" : widthP + "px" });
 
-    //     }        
+            $(".table-cell:eq("+ countCellCicklum +") .price").css({"width" : widthP + "px" });
 
-    // }
+        }        
+
+    }
 
     // --------------------------------------------------------------------
 

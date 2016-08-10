@@ -2301,6 +2301,11 @@ select::-ms-expand {
             padding: 0 0 0 30px;
         }
 
+        .table-header .sort-btn-box {
+            float: right;
+            text-align: right;
+        }
+
         .table-header .table-cell h2 {
             font-size: 13px;
         }
@@ -2324,11 +2329,13 @@ select::-ms-expand {
             display: table;
             width: auto;
             word-break: break-all;
+            font-size: 0;
+            line-height: 0;
         }
 
         .table-cell h2 {
             display: table-cell;
-            vertical-align: top;
+            vertical-align: middle;
             width: 80%;
             height: 100%;
             font-family: "Ubuntu", Arial, Verdana, sans-serif;
@@ -2445,7 +2452,7 @@ select::-ms-expand {
         .table-cell-1 {
            width: 15%;
            text-align: left;
-           padding: 0 1% 0 0;
+           /*padding: 0 1% 0 0;*/
         }
 
         .table-cell-2 {
