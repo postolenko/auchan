@@ -1661,7 +1661,7 @@ select::-ms-expand {
                     display: inline-block;
                     vertical-align: middle;
                     width: auto;
-                    min-width: 20%;
+                    min-width: 14%;
                     max-width: 25%;
                     text-align: center;
                     font-family: "Ubuntu", Arial, Verdana, sans-serif;            
@@ -1670,15 +1670,21 @@ select::-ms-expand {
                     font-weight: normal;
                     color: #ffffff;
                     margin: 2px 0 3px 0;
-                    padding: 14px 2px;
-                    letter-spacing: 1px;
+                    padding: 11px 2px;
+                    letter-spacing: 0px;
                 }
 
-                .week .calendar-table div {
+              /*  .week .calendar-table div {
                     min-width: 14%;
                     max-width: 25%;
                     padding: 11px 2px;
                     letter-spacing: 0px;
+                }*/
+
+                .month .calendar-table div {
+                    min-width: 20%;
+                    max-width: 25%;
+                    padding: 14px 2px;
                 }
 
                 .year-tab .calendar-table div {
