@@ -64,6 +64,8 @@ $(document).ready(function() {
 
         // getTableWrappWidth();
 
+        $(".calendar-btn").outerHeight($(".time-content").height());  // вычисление высоты кнопки календаря
+
 
         $(".header-page-right-col").css({"min-height" : $(".header-page-nav-list").height() + parseInt( $(".header-page-nav-list").css("margin-top") ) + "px"});
 
