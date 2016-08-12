@@ -114,6 +114,14 @@ body {
     padding: 35px 0 0 0;
 }
 
+.ui-mobile {
+    /*min-height: auto !important;*/
+}
+
+.ui-page.ui-page-theme-a.ui-page-active {
+    min-height: 0px !important;
+}
+
 .clearfix:after {
     content: "."; 
     display: block; 
