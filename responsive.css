@@ -202,6 +202,14 @@
         width: 730px;
     }
 
+/*	.list-items-box .scrollwrapp {
+		min-height: 250px !important;
+	}
+*/
+    .report-table .scrollwrapp {
+		min-height: 350px !important;
+    }
+
 	.table-header .table-cell {
 	    padding: 0 0 0 1%;
 	}

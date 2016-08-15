@@ -291,6 +291,8 @@ $(document).ready(function() {
 
     var scrollBoxTableCoor;
 
+    var scrollBoxMenuTableHeight;
+
     // Получение высоты элементов
 
         function getElemntsHeight() {
@@ -310,7 +312,15 @@ $(document).ready(function() {
 
                         scrollBoxCoor = scrollBoxMenuTable.getBoundingClientRect();
 
-                        scrollBoxMenuTable.style.height = (bodyHeight - scrollBoxCoor.top - marginContent ) + "px";
+                        scrollBoxMenuTableHeight = bodyHeight - scrollBoxCoor.top - marginContent;
+
+                        if( scrollBoxMenuTableHeight <= 0 ) {
+
+                            scrollBoxMenuTableHeight = 250;
+
+                        }
+
+                        scrollBoxMenuTable.style.height = scrollBoxMenuTableHeight + "px";
 
 
                         scrollBoxTableCoor = scrollBox.getBoundingClientRect();
