@@ -1391,11 +1391,19 @@ select::-ms-expand {
             border-radius: 23px;
         }
 
+        .day .num-day {
+            margin: 0 0 0 4.5%;
+        }
+
         .year {
             display: inline-block;
             vertical-align: middle;
             text-align: left;
             margin: 0 0 0 10%;
+        }
+
+        .day .year {
+            margin: 0;
         }
 
         .year-p {
