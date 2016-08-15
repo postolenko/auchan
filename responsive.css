@@ -82,6 +82,11 @@
 	    background: rgba(245, 248, 251, 1);
 	}
 
+	.day .year-p {
+		font-size: 11px;
+		line-height: 15px;
+	}
+
 
 	.table-header .table-cell {
 	    padding: 0 0 0 1%;
@@ -133,9 +138,6 @@
 		display: none;
 	}
 
-
-
-
 	.show-menu-head-btn {
         display: block;
         top: 7px;
@@ -164,6 +166,8 @@
 	.header-page-nav-list .item {
 	    height: 40px;
 	}
+
+
 
 	.main-content {
 		padding: 10px 0;
