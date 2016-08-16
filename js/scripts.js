@@ -49,7 +49,15 @@ $(document).ready(function() {
 
     $(document).scroll(function() {
 
+        if( $(window).scrollTop() >=  $(".report-table").offset().top ) {
 
+            $(".table-header").addClass("scrollposition");
+
+        } else {
+
+            $(".table-header").removeClass("scrollposition");
+
+        }
 
     });
 
@@ -239,46 +247,46 @@ $(document).ready(function() {
 
     // var scrollCoor = 0;
 
-    $( ".scroll-box" )
+    // $( ".scroll-box" )
 
-        .mousewheel(function() {
+    //     .mousewheel(function() {
 
-            clearTimeout(scrollCoorTime, timeOutScroll);
+    //         clearTimeout(scrollCoorTime, timeOutScroll);
 
-            scrollCoor = document.getElementsByClassName("scrollwrapp")[scrollObjectIndex].scrollTop;
+    //         scrollCoor = document.getElementsByClassName("scrollwrapp")[scrollObjectIndex].scrollTop;
 
-        })
-        .mouseenter(function() {
+    //     })
+    //     .mouseenter(function() {
 
-            scrollObjectIndex = $(".scroll-box").index(this);
+    //         scrollObjectIndex = $(".scroll-box").index(this);
 
-            scrollCoor = document.getElementsByClassName("scrollwrapp")[scrollObjectIndex].scrollTop;
+    //         scrollCoor = document.getElementsByClassName("scrollwrapp")[scrollObjectIndex].scrollTop;
 
-            scrollCoorTime = setInterval(function() {
+    //         scrollCoorTime = setInterval(function() {
 
-                if( scrollCoor >= $(".list-scroll:eq("+ scrollObjectIndex +")").height() - $(".scrollwrapp").height() ) {
+    //             if( scrollCoor >= $(".list-scroll:eq("+ scrollObjectIndex +")").height() - $(".scrollwrapp").height() ) {
 
-                    clearTimeout(scrollCoorTime, timeOutScroll);
+    //                 clearTimeout(scrollCoorTime, timeOutScroll);
 
-                    scrollCoor = document.getElementsByClassName("scrollwrapp")[scrollObjectIndex].scrollTop;
+    //                 scrollCoor = document.getElementsByClassName("scrollwrapp")[scrollObjectIndex].scrollTop;
 
-                }
+    //             }
 
-                scrollCoor++;
+    //             scrollCoor++;
 
-                document.getElementsByClassName("scrollwrapp")[scrollObjectIndex].scrollTop = scrollCoor;
+    //             document.getElementsByClassName("scrollwrapp")[scrollObjectIndex].scrollTop = scrollCoor;
 
-            }, scrollTablesTime);
+    //         }, scrollTablesTime);
 
 
-        })
-        .mouseleave(function() {
+    //     })
+    //     .mouseleave(function() {
 
-            clearTimeout(scrollCoorTime, timeOutScroll);
+    //         clearTimeout(scrollCoorTime, timeOutScroll);
 
-             scrollCoor = document.getElementsByClassName("scrollwrapp")[scrollObjectIndex].scrollTop;
+    //          scrollCoor = document.getElementsByClassName("scrollwrapp")[scrollObjectIndex].scrollTop;
 
-        });
+    //     });
 
 
 // --------------------------------------------------------------------------------
@@ -374,7 +382,7 @@ $(document).ready(function() {
 
         });
 
-        $(".close-sidebar-btn").click(function(){
+        $(".close-sidebar-btn, .menu-bg").click(function(){
 
             $(".sidebar").animate({"left" : -100 + "%"}, 500);
 

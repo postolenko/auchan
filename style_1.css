@@ -1134,7 +1134,7 @@ select::-ms-expand {
         .menu-mob .menu-section h2 {
             font-family: "Ubuntu", Arial, Verdana, sans-serif;
             color: #ffffff;
-            font-size: 15px;
+            font-size: 16px;
             line-height: 22px;
             font-weight: 400;
             padding: 25px 0 23px 0;
@@ -1391,11 +1391,19 @@ select::-ms-expand {
             border-radius: 23px;
         }
 
+        .day .num-day {
+            margin: 0 0 0 4.5%;
+        }
+
         .year {
             display: inline-block;
             vertical-align: middle;
             text-align: left;
             margin: 0 0 0 10%;
+        }
+
+        .day .year {
+            margin: 0;
         }
 
         .year-p {
@@ -1405,6 +1413,11 @@ select::-ms-expand {
             font-weight: normal;
             color: #ffffff;
             text-transform: uppercase;
+        }
+
+        .day .year-p {
+            font-size: 11px;
+            line-height: 15px;
         }
 
 
@@ -1669,7 +1682,7 @@ select::-ms-expand {
                     max-width: 25%;
                     text-align: center;
                     font-family: "Ubuntu", Arial, Verdana, sans-serif;            
-                    font-size: 15px;
+                    font-size: 16px;
                     line-height: 21px;
                     font-weight: normal;
                     color: #ffffff;
@@ -1693,11 +1706,6 @@ select::-ms-expand {
 
                 .year-tab .calendar-table div {
                     width: 25%;
-                }
-
-                div.year {
-                  margin-left: 4px;
-                  margin-right: 4px;
                 }
 
                 .calendar-table div.active {
@@ -1901,7 +1909,7 @@ select::-ms-expand {
             padding: 0 0 0 7%;
             font-family: "Ubuntu", Arial, Verdana, sans-serif;
             color: #676b73;
-            font-size: 15px;
+            font-size: 16px;
             line-height: 63px;
             font-weight: normal;
             border: 1px solid transparent;
@@ -1985,7 +1993,7 @@ select::-ms-expand {
             line-height: 0;
             font-family: "Ubuntu", Arial, Verdana, sans-serif;
             color: #a5abb8;
-            font-size: 15px;
+            font-size: 16px;
             line-height: 35px;
             padding: 0 0 0 8%;
             font-weight: normal;
@@ -2022,7 +2030,7 @@ select::-ms-expand {
             vertical-align: middle;
             font-family: "Ubuntu", Arial, Verdana, sans-serif;
             color: #a5abb8;
-            font-size: 15px;
+            font-size: 16px;
             line-height: 35px;
             font-weight: normal;
         }
@@ -2062,7 +2070,7 @@ select::-ms-expand {
             margin: 30px 0 20px 0;
             font-family: "Ubuntu", Arial, Verdana, sans-serif;
             color: #676b73;
-            font-size: 15px;
+            font-size: 16px;
             line-height: 54px;
             font-weight: 400;
             color: #ffffff;
@@ -2230,7 +2238,6 @@ select::-ms-expand {
             width: 100%;
             font-style: 0;
             line-height: 0;
-            z-index: 2;
         }
 
         .table-row.table-header {
@@ -2240,13 +2247,6 @@ select::-ms-expand {
 
         .table-header.table-row:hover {
             background: rgba(255, 255, 255, 1);
-        }
-
-        .table-row.table-header.scrollposition {
-            position: fixed;
-            top: 0;
-            left: 0;
-            margin: 0 0 0 1%;
         }
 
         .table-row {
@@ -2306,7 +2306,7 @@ select::-ms-expand {
             text-align: right;
             font-family: "Ubuntu", Arial, Verdana, sans-serif;
             color: #7e838c;
-            font-size: 15px;
+            font-size: 16px;
             line-height: 22px;
             font-weight: 400;
         }
@@ -2375,7 +2375,7 @@ select::-ms-expand {
             width: 80%;
             font-family: "Ubuntu", Arial, Verdana, sans-serif;
             color: #7e838c;
-            font-size: 15px;
+            font-size: 16px;
             line-height: 22px;
             font-weight: 400;
             text-align: right;
@@ -2432,7 +2432,7 @@ select::-ms-expand {
             vertical-align: middle;
             font-family: "Ubuntu", Arial, Verdana, sans-serif;
             color: #7e838c;
-            font-size: 15px;
+            font-size: 16px;
             line-height: 22px;
             font-weight: 400;
         }
