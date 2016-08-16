@@ -1458,18 +1458,10 @@ select::-ms-expand {
             background: rgba(25, 41, 50, 1);
         }
 
-        .calendar-icon {
+        .calendar-btn img {
             display: block;
-            width: 26px;
-            height: 30px;
-            position: relative;
-            top: 50%;
             margin: 0 auto;
-        }
-
-        .calendar-icon img {
-            display: block;
-            width: 100%;
+            width: 26px;
             height: auto;
         }
 
