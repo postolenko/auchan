@@ -3209,31 +3209,21 @@
 		<script src="colorbox/jquery.mCustomScrollbar.min.js"></script>
 
 		<script>
-		(function($){
-			$(window).on("load",function(){
-				
-				$.mCustomScrollbar.defaults.theme="light-2"; //set "light-2" as the default theme
-				
-				// $(".demo-y").mCustomScrollbar();
-				
-				// $(".demo-x").mCustomScrollbar({
-				// 	axis:"x",
-				// 	advanced:{autoExpandHorizontalScroll:true}
-				// });
-				
-				$(".scrollwrapp-report-table").mCustomScrollbar({
-					// axis:"yx",
-					// scrollInertia: 900,
-					// autoDraggerLength: true,
-					autoHideScrollbar: true
-					// setHeight: true
-					// setWidth: true
-				});
+		
+			(function($){
+				$(window).on("load",function(){
+					
+					$.mCustomScrollbar.defaults.theme="light-2"; //set "light-2" as the default theme
+					
+					$(".scrollwrapp-report-table").mCustomScrollbar({
+						autoHideScrollbar: true
+					});
 
-				
-			});
-		})(jQuery);
-	</script>
+					
+				});
+			})(jQuery);
+			
+		</script>
 		
 	</div>
 
