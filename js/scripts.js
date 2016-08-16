@@ -415,63 +415,6 @@ $(document).ready(function() {
 // ---------------------------------------------------------------------------------------------------------
 
 
-    // $(".wrapp-content-320").on("swipeleft","swiperight",function(){
-
-    //     // $(".sidebar").animate({"left" : -100 + "%"}, 500);
-
-    //     // $(".menu-bg").fadeOut(500);
-
-    //     console.log($(".report-table").offset().left);
-
-    // });
-
-var eventMouse;
-
-    $( ".wrapp-content-320" )
-    //     .mouseup(function() {
-    //     // $( this ).append( "<span style='color:#f00;'>Mouse up.</span>" );
-
-    //     eventMouse = "mouseup";
-    // })
-        .mousedown(function() {
-        // $( this ).append( "<span style='color:#00f;'>Mouse down.</span>" );
-
-            eventMouse = "mousedown";
-
-            
-
-                // $( ".wrapp-content-320" ).mousemove(function() {
-
-
-                //     $(".table-row.table-header").css({"margin-left" : $(".report-table").offset().left + "px"});
-
-                //     console.log($(".report-table").offset().left);
-
-                // });
-
-            // }
-        // console.log($(".report-table").offset().left);
-    })
-        .mousemove(function() {
-
-            if(eventMouse == "mousedown") {
-
-                    $(".table-row.table-header").css({"margin-left" : $(".report-table").offset().left + "px"});
-
-                    console.log($(".report-table").offset().left);
-
-                }
-
-        });
-
-        // $( ".wrapp-content-320" ).on("mousedown", "mousemove", function() {
-
-        //     console.log($(".report-table").offset().left);
-
-        // });
-
-
-
 
     // Показ и скрытие верхнего меню при мобильной версии
 
